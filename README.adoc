@@ -1,0 +1,6 @@
+= Arduino Seeed Library for ENGI 1020
+
+This is a library for interacting with the
+https://www.seeedstudio.com/Grove-Starter-Kit-for-Arduino-p-1855.html[
+  Seeed Studio Grove Starter Kit for Arduino],
+as we use in the labs for ENGI 1020: Introduction to Programming.
