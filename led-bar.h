@@ -24,10 +24,17 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-/*
- * Since Arduino doesn't support subdirectories (!!!), include submodule code
- * directly in this translation unit.
- */
 
-#include "Grove_Chainable_RGB_LED/ChainableLED.cpp"
-#include "Grove_LED_Bar/Grove_LED_Bar.cpp"
+/**
+ * Prepare the LED bar for use.
+ *
+ * @param    digitalPin   pin the chain is connected to (e.g., 4 for D4)
+ */
+void setupLEDBar(int digitalPin);
+
+/**
+ * Make the LED bar display a level between 0 and 10
+ *
+ * @param    level        the level to display  @pre 0 <= level <= 10.0
+ */
+void setLEDBarLevel(float level);

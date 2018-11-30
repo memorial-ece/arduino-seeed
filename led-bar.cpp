@@ -24,10 +24,21 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-/*
- * Since Arduino doesn't support subdirectories (!!!), include submodule code
- * directly in this translation unit.
- */
+#include "Grove_LED_BAR/Grove_LED_Bar.h"
 
-#include "Grove_Chainable_RGB_LED/ChainableLED.cpp"
-#include "Grove_LED_Bar/Grove_LED_Bar.cpp"
+Grove_LED_Bar *ledBar;
+
+
+void setupLEDBar(int pin)
+{
+	ledBar = new Grove_LED_Bar(pin, pin + 1, true);
+}
+
+
+void setLEDBarLevel(float level)
+{
+	if (ledBar)
+	{
+		ledBar->setLevel(level);
+	}
+}
