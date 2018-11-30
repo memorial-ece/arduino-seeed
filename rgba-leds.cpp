@@ -36,6 +36,15 @@ void setupRGBLEDs(int digitalPin, int count)
 }
 
 
+void setHSB(int led, float hue, float saturation, float brightness)
+{
+	if (ledChain)
+	{
+		ledChain->setColorHSB(led, hue, saturation, brightness);
+	}
+}
+
+
 void setRGB(int led, int red, int green, int blue)
 {
 	if (ledChain)

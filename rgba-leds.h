@@ -36,6 +36,16 @@ void setupRGBLEDs(int digitalPin, int count);
 /**
  * Set the colours emitted by a specific RGB LED in the chain.
  *
+ * @param    led          which LED to change   @pre 0 <= led < count
+ * @param    hue          colour  @pre 0 <= r <= 1.0
+ * @param    saturation   how colourful the colour is  @pre 0 <= r <= 1.0
+ * @param    brightness   overall brightness  @pre 0 <= r <= 1.0
+ */
+void setHSB(int led, float hue, float saturation, float brightness);
+
+/**
+ * Set the colours emitted by a specific RGB LED in the chain.
+ *
  * @param    led     which LED to change   @pre 0 <= led < count
  * @param    red     red component of LED  @pre 0 <= r <= 255
  * @param    green   green component of LED  @pre 0 <= r <= 255
