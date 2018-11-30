@@ -1,0 +1,3 @@
+[submodule "Grove_Chainable_RGB_LED"]
+	path = Grove_Chainable_RGB_LED
+	url = https://github.com/Seeed-Studio/Grove_Chainable_RGB_LED
