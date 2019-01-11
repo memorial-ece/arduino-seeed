@@ -27,6 +27,8 @@
 
 /**
  * Set up the LCD screen for use.
+ *
+ * This function must be called before any of the other LCD functions will work.
  */
 void lcdInit();
 

@@ -4,3 +4,81 @@ This is a library for interacting with the
 https://www.seeedstudio.com/Grove-Starter-Kit-for-Arduino-p-1855.html[
   Seeed Studio Grove Starter Kit for Arduino],
 as we use in the labs for ENGI 1020: Introduction to Programming.
+
+
+== Library reference
+
+The
+https://www.seeedstudio.com/Grove-Starter-Kit-for-Arduino-p-1855.html[
+  Seeed Studio Starter Kit for Android]
+comes with a variety of components for you to interact with.
+Each requires software interaction, which is supported by the functions in this
+library (and the libraries it uses).
+
+
+=== RGB-backlit LCD screen
+
+[float="right", width=400]
+image::https://raw.githubusercontent.com/SeeedDocument/Grove_LCD_RGB_Backlight/master/images/intro.jpg[Grove LCD RGB Backlight]
+
+The
+http://wiki.seeedstudio.com/Grove-LCD_RGB_Backlight[RGB-backlit LCD screen]
+can display text in two rows of up to 16 characters each,
+backlit with an RGB (red-green-blue) LED capable of displaying
+16.7M individual colours.
+Before the LCD display can be used, you must call the `lcdInit()` function:
+
+[source, language=C++]
+----
+/**
+ * Set up the LCD screen for use.
+ *
+ * This function must be called before any of the other LCD functions will work.
+ */
+void lcdInit();
+----
+
+
+==== Backlight
+
+The colour of the backlight can be modified with the `lcdBacklightColour()`
+function.
+This function allows the amount of red, green and blue light that should be
+emitted by the backlight, where each of these (additive) primary colours is
+given as an integer in the range [0,255].
+You may find
+https://www.w3schools.com/colors/colors_rgb.asp[this colour tool]
+helpful when choosing the colour you would like to use.
+
+[source, language=C++]
+----
+/**
+ * Change the colour of the LCD backlight.
+ *
+ * @param    red      how red the backlight should be: [0,255]
+ * @param    green    how green the backlight should be: [0,255]
+ * @param    blue     how blue the backlight should be: [0,255]
+ */
+void lcdBacklightColour(int red, int green, int blue);
+----
+
+
+==== Text
+
+Text is displayed (or cleared!) on the LCD screen using the following functions:
+
+[source, language=C++]
+----
+/**
+ * Clear all text from the LCD display.
+ */
+void lcdClear();
+----
+
+[source, language=C++]
+----
+/**
+ * Print a string to the LCD screen.
+ */
+void lcdPrint(String);
+----
