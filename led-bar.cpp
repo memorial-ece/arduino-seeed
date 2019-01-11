@@ -24,7 +24,7 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include "Grove_LED_BAR/Grove_LED_Bar.h"
+#include "Grove_LED_Bar/Grove_LED_Bar.h"
 
 Grove_LED_Bar *ledBar;
 
