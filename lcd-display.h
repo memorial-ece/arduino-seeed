@@ -50,4 +50,4 @@ void lcdClear();
 /**
  * Print a string to the LCD screen.
  */
-void lcdPrint(String);
+void lcdPrint(const char *);

@@ -47,7 +47,7 @@ void lcdClear()
 	lcd.clear();
 }
 
-void lcdPrint(String message)
+void lcdPrint(const char *message)
 {
 	lcd.print(message);
 }
