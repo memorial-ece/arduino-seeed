@@ -4,3 +4,6 @@
 [submodule "Grove_LED_Bar"]
 	path = Grove_LED_Bar
 	url = https://github.com/Seeed-Studio/Grove_LED_Bar
+[submodule "Grove_LCD_RGB_Backlight"]
+	path = Grove_LCD_RGB_Backlight
+	url = https://github.com/Seeed-Studio/Grove_LCD_RGB_Backlight

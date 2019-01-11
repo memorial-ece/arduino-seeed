@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2018 Jonathan Anderson
+ * Copyright (c) 2019 Jonathan Anderson
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -24,6 +24,28 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include "lcd-display.h"
-#include "led-bar.h"
-#include "rgba-leds.h"
+
+/**
+ * Set up the LCD screen for use.
+ */
+void lcdInit();
+
+
+/**
+ * Change the colour of the LCD backlight.
+ *
+ * @param    red      how red the backlight should be: [0,255]
+ * @param    green    how green the backlight should be: [0,255]
+ * @param    blue     how blue the backlight should be: [0,255]
+ */
+void lcdBacklightColour(int red, int green, int blue);
+
+/**
+ * Clear all text from the LCD display.
+ */
+void lcdClear();
+
+/**
+ * Print a string to the LCD screen.
+ */
+void lcdPrint(String);

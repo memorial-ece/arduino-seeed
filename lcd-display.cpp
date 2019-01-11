@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2018 Jonathan Anderson
+ * Copyright (c) 2019 Jonathan Anderson
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -24,6 +24,30 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+#include "Grove_LCD_RGB_Backlight/rgb_lcd.h"
 #include "lcd-display.h"
-#include "led-bar.h"
-#include "rgba-leds.h"
+
+rgb_lcd lcd;
+
+
+void lcdInit()
+{
+	lcd.begin(16, 2);
+	lcd.clear();
+	lcd.setRGB(255, 255, 255);
+}
+
+void lcdBacklightColour(int red, int green, int blue)
+{
+	lcd.setRGB(red, green, blue);
+}
+
+void lcdClear()
+{
+	lcd.clear();
+}
+
+void lcdPrint(String message)
+{
+	lcd.print(message);
+}

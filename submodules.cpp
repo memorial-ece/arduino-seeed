@@ -30,4 +30,5 @@
  */
 
 #include "Grove_Chainable_RGB_LED/ChainableLED.cpp"
+#include "Grove_LCD_RGB_Backlight/rgb_lcd.cpp"
 #include "Grove_LED_Bar/Grove_LED_Bar.cpp"
