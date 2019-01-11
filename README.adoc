@@ -82,3 +82,60 @@ void lcdClear();
  */
 void lcdPrint(String);
 ----
+
+
+=== Chainable RGBA LED
+
+[float="right", width=300]
+image::https://raw.githubusercontent.com/SeeedDocument/Grove-Chainable_RGB_LED/master/img/Grove-Chainable_RGB_LED_V2.0.jpg[Chainable RGBA LED]
+
+Multiple
+http://wiki.seeedstudio.com/Grove-Chainable_RGB_LED[RGBA LEDs]
+(red, green, blue and _alpha_, or _brightness_) can be chained
+together by connecting one to an I2C port and then connecting several LEDS'
+"in" and "out" ports together.
+Your first LED-related function call must be to the `rgbLedInit()` function:
+
+
+[source, language=C++]
+----
+/**
+ * Prepare the RGB LED chain.
+ *
+ * @param    digitalPin   pin the chain is connected to (e.g., 4 for D4)
+ * @param    count        number of LEDs in the chain
+ */
+void rgbLedInit(int digitalPin, int count);
+----
+
+
+==== Colour manipulation
+
+Any RGBA LED in the chain can be set to any colour, using either the
+http://colorizer.org[HSV or RGB colour models].
+
+[source, language=C++]
+----
+/**
+ * Set the colours emitted by a specific RGB LED in the chain.
+ *
+ * @param    led          which LED to change   @pre 0 <= led < count
+ * @param    hue          colour  @pre 0 <= r <= 1.0
+ * @param    saturation   how colourful the colour is  @pre 0 <= r <= 1.0
+ * @param    brightness   overall brightness  @pre 0 <= r <= 1.0
+ */
+void rgbLedHSB(int led, float hue, float saturation, float brightness);
+----
+
+[source, language=C++]
+----
+/**
+ * Set the colours emitted by a specific RGB LED in the chain.
+ *
+ * @param    led     which LED to change   @pre 0 <= led < count
+ * @param    red     red component of LED  @pre 0 <= r <= 255
+ * @param    green   green component of LED  @pre 0 <= r <= 255
+ * @param    blue    blue component of LED  @pre 0 <= r <= 255
+ */
+void rgbLedRGB(int led, int red, int green, int blue);
+----

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2018 Jonathan Anderson
+ * Copyright (c) 2018-2019 Jonathan Anderson
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -31,7 +31,7 @@
  * @param    digitalPin   pin the chain is connected to (e.g., 4 for D4)
  * @param    count        number of LEDs in the chain
  */
-void setupRGBLEDs(int digitalPin, int count);
+void rgbLedInit(int digitalPin, int count);
 
 /**
  * Set the colours emitted by a specific RGB LED in the chain.
@@ -41,7 +41,7 @@ void setupRGBLEDs(int digitalPin, int count);
  * @param    saturation   how colourful the colour is  @pre 0 <= r <= 1.0
  * @param    brightness   overall brightness  @pre 0 <= r <= 1.0
  */
-void setHSB(int led, float hue, float saturation, float brightness);
+void rgbLedHSB(int led, float hue, float saturation, float brightness);
 
 /**
  * Set the colours emitted by a specific RGB LED in the chain.
@@ -51,4 +51,4 @@ void setHSB(int led, float hue, float saturation, float brightness);
  * @param    green   green component of LED  @pre 0 <= r <= 255
  * @param    blue    blue component of LED  @pre 0 <= r <= 255
  */
-void setRGB(int led, int red, int green, int blue);
+void rgbLedRGB(int led, int red, int green, int blue);

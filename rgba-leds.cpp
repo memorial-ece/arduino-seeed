@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2018 Jonathan Anderson
+ * Copyright (c) 2018-2019 Jonathan Anderson
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -30,13 +30,13 @@
 ChainableLED *ledChain;
 
 
-void setupRGBLEDs(int digitalPin, int count)
+void rgbLedInit(int digitalPin, int count)
 {
 	ledChain = new ChainableLED(digitalPin, digitalPin + 1, count);
 }
 
 
-void setHSB(int led, float hue, float saturation, float brightness)
+void rgbLedHSB(int led, float hue, float saturation, float brightness)
 {
 	if (ledChain)
 	{
@@ -45,7 +45,7 @@ void setHSB(int led, float hue, float saturation, float brightness)
 }
 
 
-void setRGB(int led, int red, int green, int blue)
+void rgbLedRGB(int led, int red, int green, int blue)
 {
 	if (ledChain)
 	{
