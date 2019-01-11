@@ -26,7 +26,8 @@ http://wiki.seeedstudio.com/Grove-LCD_RGB_Backlight[RGB-backlit LCD screen]
 can display text in two rows of up to 16 characters each,
 backlit with an RGB (red-green-blue) LED capable of displaying
 16.7M individual colours.
-Before the LCD display can be used, you must call the `lcdInit()` function:
+Before the LCD display can be used, you must connect it to an I2C port on the
+Grove shield and call the `lcdInit()` function:
 
 [source, language=C++]
 ----
