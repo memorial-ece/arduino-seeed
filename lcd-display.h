@@ -48,6 +48,14 @@ void lcdBacklightColour(int red, int green, int blue);
 void lcdClear();
 
 /**
+ * Move the cursor to a specific location.
+ *
+ * @param    int x
+ * @param    int y
+ */
+void lcdMoveCursor(int x, int y);
+
+/**
  * Print a string to the LCD screen.
  */
 void lcdPrint(const char *);
