@@ -52,6 +52,11 @@ void lcdMoveCursor(int x, int y)
 	lcd.setCursor(x, y);
 }
 
+void lcdPrint(int n)
+{
+	lcd.print(n);
+}
+
 void lcdPrint(const char *message)
 {
 	lcd.print(message);

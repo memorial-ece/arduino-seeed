@@ -56,6 +56,13 @@ void lcdClear();
 void lcdMoveCursor(int x, int y);
 
 /**
+ * Print an integer to the LCD screen.
+ *
+ * @param   n    the integer to print
+ */
+void lcdPrint(int n);
+
+/**
  * Print a string to the LCD screen.
  */
 void lcdPrint(const char *);
