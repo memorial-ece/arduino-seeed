@@ -50,8 +50,8 @@ void lcdClear();
 /**
  * Move the cursor to a specific location.
  *
- * @param    int x
- * @param    int y
+ * @param    int x     which column to move the cursor to
+ * @param    int y     which row to move the cursor to
  */
 void lcdMoveCursor(int x, int y);
 
