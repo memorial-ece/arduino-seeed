@@ -88,12 +88,18 @@ of the screen, call `lcdClear()`:
 void lcdClear();
 ----
 
-**TODO:** add cursor-location manipulation functions to this reference
-
-To output text to the screen, pass a string literal to the `lcdPrint` function:
+To output text to the screen, pass an integer or a string to one of the
+`lcdPrint` functions:
 
 [source, language=C++]
 ----
+/**
+ * Print a string to the LCD screen.
+ *
+ * @note    not available in Lab 1 library
+ */
+void lcdPrint(int);
+
 /**
  * Print a string to the LCD screen.
  *
@@ -101,4 +107,20 @@ To output text to the screen, pass a string literal to the `lcdPrint` function:
  *                     current cursor location
  */
 void lcdPrint(String message);
+----
+
+You can move the cursor (from which new printing will happen) to any location
+on the screen using the `lcdMoveCursor` function:
+
+[source, language=C++]
+----
+/**
+ * Move the cursor to a specific location.
+ *
+ * @param    int x
+ * @param    int y
+ *
+ * @note    not available in Lab 1 library
+ */
+void lcdMoveCursor(int x, int y);
 ----
