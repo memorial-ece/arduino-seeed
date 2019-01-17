@@ -3,7 +3,7 @@ title: Digital components
 ---
 
 Simple digital components can either be _on_ or _off_.
-Interacting with them is quite straightforward.
+Interacting with them is straightforward.
 
 <!--more-->
 
