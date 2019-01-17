@@ -10,8 +10,7 @@ backlit with an RGB (red-green-blue) LED capable of displaying
 
 <!--more-->
 
-[width=400]
-image::https://raw.githubusercontent.com/SeeedDocument/Grove_LCD_RGB_Backlight/master/images/intro.jpg[Grove LCD RGB Backlight]
+image::../lcd-screen.jpeg[Grove RGB-backlit LCD screen, width=300]
 
 
 == Hardware
