@@ -16,7 +16,9 @@ image::../lcd-screen.jpeg[Grove RGB-backlit LCD screen, width=300]
 == Hardware
 
 Plug the LCD screen into any of the I2C ports on your
-https://www.seeedstudio.com/Base-Shield-V2-p-1378.html[Grove shield].
+https://www.seeedstudio.com/Base-Shield-V2-p-1378.html[Grove shield]:
+
+image::../shield-i2c.png[I2C ports on the Grove shield v2.0, height=250]
 
 
 == Software

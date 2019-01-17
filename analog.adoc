@@ -20,7 +20,7 @@ range of values (in our case, anywhere between 0 and 5 Volts).
 These components are connected to one of the analog ("A") ports on the Grove
 shield:
 
-image::../shield.jpeg[Grove shield v2, height=250]
+image::../shield-analog.png[Analog pins on the Grove shield v2.0, height=250]
 
 
 == Software

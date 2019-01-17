@@ -16,8 +16,11 @@ These LEDs (light-emitting diodes) have four control channels:
 Red, Green, Blue and _Alpha_ (brightness).
 Multiple
 http://wiki.seeedstudio.com/Grove-Chainable_RGB_LED[RGBA LEDs] can be chained
-together by connecting one to an I2C port and then connecting several LEDS'
-"in" and "out" ports together.
+together by connecting one to one of the I2C ports on the Grove shield:
+
+image::../shield-i2c.png[I2C ports on the Grove shield v2.0, height=250]
+
+and then connecting several LEDS' "in" and "out" ports together.
 
 == Software
 
