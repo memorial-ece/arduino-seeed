@@ -9,7 +9,6 @@ Generic analog components are all accessed via a common set of {cpp} functions.
 [.centered]
 image:../rotary-dial.jpeg[Rotary dial, height=200]
 image:../light-sensor.jpeg[Light sensor, height=200]
-image:../servo.jpeg[Servo, height=200]
 
 == Hardware
 
