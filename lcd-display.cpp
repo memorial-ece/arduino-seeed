@@ -52,6 +52,11 @@ void lcdMoveCursor(int x, int y)
 	lcd.setCursor(x, y);
 }
 
+void lcdPrint(double x)
+{
+	lcd.print(x);
+}
+
 void lcdPrint(int n)
 {
 	lcd.print(n);

@@ -56,6 +56,13 @@ void lcdClear();
 void lcdMoveCursor(int x, int y);
 
 /**
+ * Print a floating-point number to the LCD screen.
+ *
+ * @param   f    the number to print
+ */
+void lcdPrint(double);
+
+/**
  * Print an integer to the LCD screen.
  *
  * @param   n    the integer to print
