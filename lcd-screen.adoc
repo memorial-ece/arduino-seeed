@@ -95,7 +95,7 @@ To output text to the screen, pass an integer or a string to one of the
 [source, language=C++]
 ----
 /**
- * Print a string to the LCD screen.
+ * Print an integer to the LCD screen.
  *
  * @param    n         the value to print to the screen
  */
