@@ -96,8 +96,6 @@ To output text to the screen, pass an integer or a string to one of the
 ----
 /**
  * Print a string to the LCD screen.
- *
- * @note    not available in Lab 1 library
  */
 void lcdPrint(int);
 
@@ -120,8 +118,6 @@ on the screen using the `lcdMoveCursor` function:
  *
  * @param    int x
  * @param    int y
- *
- * @note    not available in Lab 1 library
  */
 void lcdMoveCursor(int x, int y);
 ----
