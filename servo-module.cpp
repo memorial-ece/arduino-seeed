@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2018 Jonathan Anderson
+ * Copyright (c) 2019 Jonathan Anderson
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -24,7 +24,23 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include "lcd-display.h"
-#include "led-bar.h"
-#include "rgba-leds.h"
-#include "servo-module.h"
+#include <Servo.h>
+
+
+Servo *servo;
+
+
+void servoInit(int pin)
+{
+	servo = new Servo();
+	servo->attach(pin);
+}
+
+
+void servoMove(int angle)
+{
+	if (servo)
+	{
+		servo->write(angle);
+	}
+}

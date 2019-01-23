@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2018 Jonathan Anderson
+ * Copyright (c) 2019 Jonathan Anderson
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -24,7 +24,18 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include "lcd-display.h"
-#include "led-bar.h"
-#include "rgba-leds.h"
-#include "servo-module.h"
+
+/**
+ * Prepare to use a servo module.
+ *
+ * @param   pin     the **digital** pin the servo is attached to
+ */
+void servoInit(int pin);
+
+
+/**
+ * @param   angle   the angle to turn the servo to [degrees]
+ *
+ * @pre angle >= 0 and angle <= 180
+ */
+void servoMove(int angle);
