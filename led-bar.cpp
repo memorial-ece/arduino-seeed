@@ -29,13 +29,14 @@
 Grove_LED_Bar *ledBar;
 
 
-void setupLEDBar(int pin)
+void barInit(int pin)
 {
-	ledBar = new Grove_LED_Bar(pin, pin + 1, true);
+	ledBar = new Grove_LED_Bar( pin + 1, pin, true);
+	ledBar->begin();
 }
 
 
-void setLEDBarLevel(float level)
+void barSetLevel(float level)
 {
 	if (ledBar)
 	{
