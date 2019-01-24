@@ -1,0 +1,46 @@
+---
+title: LED bar
+---
+
+The
+http://wiki.seeedstudio.com/Grove-LED_Bar[Grove LED bar]
+includes multiple LEDs that can be turned on or off independently and can be
+used to represent a kind of bar graph.
+
+<!--more-->
+
+image::../led-bar.jpeg[LED Bar, height=200]
+
+
+== Hardware
+
+The LED bar should be plugged into a **digital port** on your
+https://www.seeedstudio.com/Base-Shield-V2-p-1378.html[Grove shield]:
+
+image::../shield-digital.png[Digital ports on the Grove shield v2.0, height=250]
+
+
+== Software
+
+Functions that interact with the LED bar are prefixed with `ledBar`.
+
+
+=== Initialization
+
+To prepare the software library to use the servomotor, first call the
+`ledBar` function, telling it which pin it is connected to:
+
+[source, language=C++]
+----
+/**
+ * Prepare to use an LED bar.
+ *
+ * @param   pin     the **digital** pin the bar is attached to
+ */
+void ledBarInit(int pin);
+----
+
+
+=== LED control
+
+TBA
