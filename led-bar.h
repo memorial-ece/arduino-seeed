@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2018 Jonathan Anderson
+ * Copyright (c) 2019 Jonathan Anderson, Lori Hogan
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -24,17 +24,16 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-
 /**
  * Prepare the LED bar for use.
  *
  * @param    digitalPin   pin the chain is connected to (e.g., 4 for D4)
  */
-void setupLEDBar(int digitalPin);
+void barInit(int digitalPin);
 
 /**
  * Make the LED bar display a level between 0 and 10
  *
  * @param    level        the level to display  @pre 0 <= level <= 10.0
  */
-void setLEDBarLevel(float level);
+void barSetLevel(float level);
