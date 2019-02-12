@@ -7,6 +7,8 @@ SOURCE_FILES= \
 	led-bar.cpp \
 	rgba-leds.h \
 	rgba-leds.cpp \
+	servo-motor.h \
+	servo-motor.cpp \
 	submodules.cpp \
 	Grove_Chainable_RGB_LED/ChainableLED.h \
 	Grove_Chainable_RGB_LED/ChainableLED.cpp \
