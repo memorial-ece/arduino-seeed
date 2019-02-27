@@ -37,3 +37,12 @@ void barInit(int digitalPin);
  * @param    level        the level to display  @pre 0 <= level <= 10.0
  */
 void barSetLevel(float level);
+
+/**
+ * Set the brightness of a single LED in the bar
+ *
+ * @param    led         which led to manipulate  @pre 1 <= led <= 10
+ * @param    brightness  how bright to make it @pre 0 <= brightness <= 1
+ */
+void barSetLed(int led, float brightness);
+
