@@ -43,3 +43,11 @@ void barSetLevel(float level)
 		ledBar->setLevel(level);
 	}
 }
+
+void barSetLed(int led, float brightness)
+{
+	if (ledBar)
+	{
+		ledBar->setLed(led, brightness);
+	}
+}
