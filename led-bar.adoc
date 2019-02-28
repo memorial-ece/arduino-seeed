@@ -37,10 +37,35 @@ To prepare the software library to use the servomotor, first call the
  *
  * @param   pin     the **digital** pin the bar is attached to
  */
-void ledBarInit(int pin);
+void barInit(int pin);
 ----
 
 
 === LED control
 
-TBA
+There are ten different LEDs on the LED bar. We can control the brightness of each individually or all bars up to a given level/
+
+To light up all bars to a certain level, call `barSetLevel()`:
+
+[source, language=C++]
+----
+/**
+ * Make the LED bar display a level between 0 and 10
+ *
+ * @param    level        the level to display  @pre 0 <= level <= 10.0
+ */
+void barSetLevel(float level);
+----
+
+To light any individual bar, call `barSetLed()`:
+
+[source, language=C++]
+----
+/**
+ * Set brightness for a single LED in the bar
+ *
+ * @param    led          which LED to manipulate  @pre 1 <= led <= 10
+ * @param    brightness   how bright to make it @pre 0 <= brightness <= 1
+ */
+void barSetLed(int led, float brightness);
+----
