@@ -27,4 +27,4 @@
 #include "lcd-display.h"
 #include "led-bar.h"
 #include "rgba-leds.h"
-#include "servo-module.h"
+#include "servo-motor.h"
