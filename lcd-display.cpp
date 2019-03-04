@@ -34,7 +34,7 @@ void lcdInit()
 {
 	lcd.begin(16, 2);
 	lcd.clear();
-	lcd.setRGB(255, 255, 255);
+	lcd.setRGB(10, 10, 10);
 }
 
 void lcdBacklightColour(int red, int green, int blue)
