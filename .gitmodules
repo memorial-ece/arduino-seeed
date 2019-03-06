@@ -7,3 +7,6 @@
 [submodule "Grove_LCD_RGB_Backlight"]
 	path = Grove_LCD_RGB_Backlight
 	url = https://github.com/Seeed-Studio/Grove_LCD_RGB_Backlight
+[submodule "Grove_Ultrasonic_Ranger"]
+	path = Grove_Ultrasonic_Ranger
+	url = https://github.com/Seeed-Studio/Grove_Ultrasonic_Ranger
