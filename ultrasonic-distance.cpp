@@ -24,8 +24,21 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include "lcd-display.h"
-#include "led-bar.h"
-#include "rgba-leds.h"
-#include "servo-motor.h"
-#include "ultrasonic-distance.h"
+#include "Grove_Ultrasonic_Ranger/Ultrasonic.h"
+
+Ultrasonic *ultra;
+
+
+void ultraInit(int pin)
+{
+	ultra = new Ultrasonic( pin );
+}
+
+
+long ultraGetDist()
+{
+	if (ultra)
+	{
+		return ultra->MeasureInCentimeters();
+	}
+}

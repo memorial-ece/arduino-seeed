@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2018 Jonathan Anderson
+ * Copyright (c) 2019 Jonathan Anderson, Lori Hogan
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -24,8 +24,18 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include "lcd-display.h"
-#include "led-bar.h"
-#include "rgba-leds.h"
-#include "servo-motor.h"
-#include "ultrasonic-distance.h"
+/**
+ * Prepare the ultrasonic distance sensor for use.
+ *
+ * @param    digitalPin   pin the chain is connected to (e.g., 4 for D4)
+ */
+void ultraInit(int digitalPin);
+
+/**
+ * Get the distance reading from the ultrasonic sensor
+ *
+ * @return	distance in cm (range of 0 - 400 cm)
+ *
+ */
+long ultraGetDist();
+
