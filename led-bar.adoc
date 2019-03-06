@@ -27,7 +27,7 @@ Functions that interact with the LED bar are prefixed with `bar`.
 
 === Initialization
 
-To prepare the software library to use the servomotor, first call the
+To prepare the software library to use the LED bar, first call the
 `bar` function, telling it which pin it is connected to:
 
 [source, language=C++]
