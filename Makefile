@@ -10,6 +10,8 @@ SOURCE_FILES= \
 	servo-motor.h \
 	servo-motor.cpp \
 	submodules.cpp \
+	ultrasonic-distance.h \
+	ultrasonic-distance.cpp \
 	Grove_Chainable_RGB_LED/ChainableLED.h \
 	Grove_Chainable_RGB_LED/ChainableLED.cpp \
 	Grove_LCD_RGB_Backlight/rgb_lcd.cpp \
