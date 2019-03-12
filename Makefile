@@ -16,6 +16,8 @@ SOURCE_FILES= \
 	Grove_LCD_RGB_Backlight/rgb_lcd.h \
 	Grove_LED_Bar/Grove_LED_Bar.cpp \
 	Grove_LED_Bar/Grove_LED_Bar.h \
+	Grove_Ultrasonic_Ranger/Ultrasonic.h \
+	Grove_Ultrasonic_Ranger/Ultrasonic.cpp \
 
 all: zip
 clean:
