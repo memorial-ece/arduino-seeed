@@ -31,3 +31,4 @@
 #include "ultrasonic-distance.h"
 #include "barometer.h"
 #include "speech-recognizer.h"
+#include "gesture-sensor.h"

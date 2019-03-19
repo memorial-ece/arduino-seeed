@@ -13,3 +13,6 @@
 [submodule "Grove_BMP280"]
 	path = Grove_BMP280
 	url = https://github.com/Seeed-Studio/Grove_BMP280
+[submodule "Gesture_PAJ7620"]
+	path = Gesture_PAJ7620
+	url = https://github.com/Seeed-Studio/Gesture_PAJ7620
