@@ -12,6 +12,12 @@ SOURCE_FILES= \
 	submodules.cpp \
 	ultrasonic-distance.h \
 	ultrasonic-distance.cpp \
+	speech-recognizer.h \
+	speech-recognizer.cpp \
+	gesture-sensor.h \
+	gesture-sensor.cpp \
+	barometer.h \
+	barometer.cpp \
 	Grove_Chainable_RGB_LED/ChainableLED.h \
 	Grove_Chainable_RGB_LED/ChainableLED.cpp \
 	Grove_LCD_RGB_Backlight/rgb_lcd.cpp \
@@ -20,6 +26,10 @@ SOURCE_FILES= \
 	Grove_LED_Bar/Grove_LED_Bar.h \
 	Grove_Ultrasonic_Ranger/Ultrasonic.h \
 	Grove_Ultrasonic_Ranger/Ultrasonic.cpp \
+	Grove_BMP280/Seeed_BMP280.h \
+	Grove_BMP280/Seeed_BMP280.cpp \
+	Grove_PAJ7620/paj7620.h \
+	Grove_PAJ7620/paj7620.cpp \
 
 all: zip
 clean:
