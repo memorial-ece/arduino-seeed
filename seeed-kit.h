@@ -30,3 +30,4 @@
 #include "servo-motor.h"
 #include "ultrasonic-distance.h"
 #include "barometer.h"
+#include "speech-recognizer.h"
