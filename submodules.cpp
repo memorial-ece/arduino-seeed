@@ -33,3 +33,4 @@
 #include "Grove_LCD_RGB_Backlight/rgb_lcd.cpp"
 #include "Grove_LED_Bar/Grove_LED_Bar.cpp"
 #include "Grove_Ultrasonic_Ranger/Ultrasonic.cpp"
+#include "Grove_BMP280/Seeed_BMP280.cpp"

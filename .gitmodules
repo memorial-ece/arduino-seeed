@@ -10,3 +10,6 @@
 [submodule "Grove_Ultrasonic_Ranger"]
 	path = Grove_Ultrasonic_Ranger
 	url = https://github.com/Seeed-Studio/Grove_Ultrasonic_Ranger
+[submodule "Grove_BMP280"]
+	path = Grove_BMP280
+	url = https://github.com/Seeed-Studio/Grove_BMP280

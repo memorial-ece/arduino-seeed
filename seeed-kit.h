@@ -29,3 +29,4 @@
 #include "rgba-leds.h"
 #include "servo-motor.h"
 #include "ultrasonic-distance.h"
+#include "barometer.h"
