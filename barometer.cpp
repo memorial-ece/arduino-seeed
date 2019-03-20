@@ -4,14 +4,17 @@
 
 
 ////GLOBAL VARIABLES
-BMP280 barometer; //Barometer
+BMP280 *barometer; //Barometer
 
 /**
  * Set up the barometer for use.
  *
  * This function must be called before any of the other barometer functions will work.
  */
-void bmpInit();
+void bmpInit()
+{
+	barometer->init();
+}
 
 /**
 Gets temperature reading in Celsius from barometer
@@ -20,7 +23,7 @@ Gets temperature reading in Celsius from barometer
 */
 float bmpGetTemperature()
 {
-	return (barometer.getTemperature());
+	return (barometer->getTemperature());
 }
 
 /**
@@ -30,7 +33,7 @@ Gets pressure reading in Pa from barometer
 */
 unsigned int bmpGetPressure()
 {
-	return (barometer.getPressure());
+	return (barometer->getPressure());
 }
 
 /**
@@ -41,5 +44,5 @@ Gets altitude reading in m from barometer
 */
 float bmpCalcAltitude(float pressure)
 {
-	return (barometer.calcAltitude(pressure));
+	return (barometer->calcAltitude(pressure));
 }
