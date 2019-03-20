@@ -16,3 +16,6 @@
 [submodule "Gesture_PAJ7620"]
 	path = Gesture_PAJ7620
 	url = https://github.com/Seeed-Studio/Gesture_PAJ7620
+[submodule "RTC_DS1307"]
+	path = RTC_DS1307
+	url = https://github.com/Seeed-Studio/RTC_DS1307

@@ -35,3 +35,4 @@
 #include "Grove_Ultrasonic_Ranger/Ultrasonic.cpp"
 #include "Grove_BMP280/Seeed_BMP280.cpp"
 #include "Gesture_PAJ7620/paj7620.cpp"
+#include "RTC_DS1307/DS1307.cpp"

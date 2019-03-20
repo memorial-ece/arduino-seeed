@@ -30,6 +30,8 @@ SOURCE_FILES= \
 	Grove_BMP280/Seeed_BMP280.cpp \
 	Grove_PAJ7620/paj7620.h \
 	Grove_PAJ7620/paj7620.cpp \
+	RTC_DS1307/DS1307.h \
+	RTC_DS1307/DS1307.cpp \
 
 all: zip
 clean:
