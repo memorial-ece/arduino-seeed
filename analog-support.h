@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2018 Jonathan Anderson
+ * Copyright (c) 2019 Lori Hogan
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -24,15 +24,28 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-
-#include "lcd-display.h"
-#include "led-bar.h"
-#include "rgba-leds.h"
-#include "servo-motor.h"
-#include "ultrasonic-distance.h"
-#include "barometer.h"
-#include "speech-recognizer.h"
-#include "gesture-sensor.h"
-#include "real-time-clock.h"
-#include "segment-display.h"
 #include "analog-support.h"
+
+//Functions to support analog devices
+
+/**
+ * This function converts sensor reading to temperature via datasheet information
+ *
+ * @param   	reading     analog sensor reading @pre 0 <= a <= 1023
+ * 
+ * @returns     celsius temperature reading
+ */
+float tempGetCelsius(int reading)
+{
+	const int B = 4275;               // B value of the thermistor, from datasheet
+	const int R0 = 100000;            // R0 = 100k
+
+	float R = 1023.0 / reading - 1.0;
+	R = R0 * R;
+
+	float celsius = 1.0 / (log(R / R0) / B + 1 / 298.15) - 273.15; // conversion formula
+	
+	return celsius;
+}
+
+
