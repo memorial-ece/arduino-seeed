@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2018 Jonathan Anderson
+ * Copyright (c) 2019 Lori Hogan
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -24,16 +24,10 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+#include <Wire.h>
+#include <math.h>
+#include <Servo.h>
+#include "Arduino.h"
 
-#include "lcd-display.h"
-#include "led-bar.h"
-#include "rgba-leds.h"
-#include "servo-motor.h"
-#include "ultrasonic-distance.h"
-#include "barometer.h"
-#include "speech-recognizer.h"
-#include "gesture-sensor.h"
-#include "real-time-clock.h"
-#include "segment-display.h"
-#include "analog-support.h"
-#include "digital-support.h"
+//Functions to support various "typical" digital devices
+void speakerPlayNote(int f, int port, float seconds);

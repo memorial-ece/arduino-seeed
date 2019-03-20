@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2018 Jonathan Anderson
+ * Copyright (c) 2019 Lori Hogan
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -24,16 +24,32 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-
-#include "lcd-display.h"
-#include "led-bar.h"
-#include "rgba-leds.h"
-#include "servo-motor.h"
-#include "ultrasonic-distance.h"
-#include "barometer.h"
-#include "speech-recognizer.h"
-#include "gesture-sensor.h"
-#include "real-time-clock.h"
-#include "segment-display.h"
-#include "analog-support.h"
 #include "digital-support.h"
+
+//Functions to support various "typical" digital devices
+
+/**
+ * This function plays a note of the given frequency using the Grove speaker/buzzer
+ *
+ * @param   	f     	the frequency of note to be played in Hz @pre > 0
+ * @param		port  	the digital post into which the buzzer or speaker in connected
+ * @param		seconds	approximate time in seconds you want note to play
+ *
+ * @returns     nothing
+ * @modifies	plays a note from the speaker/buzzer corresponding to the frequency
+ */
+void speakerPlayNote(int f, int port, float seconds)
+{
+
+  //Convert frequency of note to time period in microseconds
+  int time = 1000000.0 / (2 * f);
+
+  //Send digital square wave to speaker with the calculated period
+  for (int i = 0; i < 100*seconds; i++)
+  {
+    digitalWrite(port, HIGH);
+    delayMicroseconds(time);
+    digitalWrite(port, LOW);
+    delayMicroseconds(time);
+  }
+}
