@@ -73,3 +73,11 @@ void lcdPrint(int n);
  * Print a string to the LCD screen.
  */
 void lcdPrint(const char *);
+
+/**
+ * Print a char to the LCD screen.
+ */
+ void lcdPrint(char c)
+{
+	lcd.print(c);
+}

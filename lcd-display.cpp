@@ -66,3 +66,9 @@ void lcdPrint(const char *message)
 {
 	lcd.print(message);
 }
+
+void lcdPrint(char c)
+{
+	lcd.print(c);
+}
+
