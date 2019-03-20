@@ -33,3 +33,4 @@
 #include "speech-recognizer.h"
 #include "gesture-sensor.h"
 #include "real-time-clock.h"
+#include "segment-display.h"

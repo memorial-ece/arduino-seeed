@@ -32,6 +32,8 @@ SOURCE_FILES= \
 	Grove_PAJ7620/paj7620.cpp \
 	RTC_DS1307/DS1307.h \
 	RTC_DS1307/DS1307.cpp \
+	Grove_4Digital_Display/TM1637.h \
+	Grove_4Digital_Display/TM1637.cpp \
 
 all: zip
 clean:

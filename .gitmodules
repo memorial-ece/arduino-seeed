@@ -19,3 +19,6 @@
 [submodule "RTC_DS1307"]
 	path = RTC_DS1307
 	url = https://github.com/Seeed-Studio/RTC_DS1307
+[submodule "Grove_4Digital_Display"]
+	path = Grove_4Digital_Display
+	url = https://github.com/Seeed-Studio/Grove_4Digital_Display

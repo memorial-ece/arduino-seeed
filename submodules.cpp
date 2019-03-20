@@ -36,3 +36,4 @@
 #include "Grove_BMP280/Seeed_BMP280.cpp"
 #include "Gesture_PAJ7620/paj7620.cpp"
 #include "RTC_DS1307/DS1307.cpp"
+#include "Grove_4Digital_Display/TM1637.cpp"
