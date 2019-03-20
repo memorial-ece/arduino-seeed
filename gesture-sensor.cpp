@@ -1,4 +1,4 @@
-#include "engi1020gesture.h"
+#include "gesture-sensor.h"
 
 /**
 Initialiazes gesture sensor
