@@ -4,7 +4,7 @@
 
 
 ////GLOBAL VARIABLES
-SoftwareSerial *speechRec
+SoftwareSerial *speechRec;
 
 const char * speechCommands[] =
 {
