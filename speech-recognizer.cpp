@@ -1,10 +1,10 @@
 ////INCLUDE STATEMENTS
 // Including the header files for libraries with the functions we need for this library
-#include "engi1020speechRec.h"
+#include "speech-recognizer.h"
 
 
 ////GLOBAL VARIABLES
-SoftwareSerial speechRec(SPEECH_RX_PIN, SPEECH_TX_PIN);
+SoftwareSerial *speechRec
 
 const char * speechCommands[] =
 {
@@ -36,10 +36,11 @@ const char * speechCommands[] =
 Required to initialize speech recognizer - call in initProject()
 
 */
-void initCommandSpeech()
+void initCommandSpeech(int rxPin, int txPin)
 {
-	speechRec.begin(9600);
-	speechRec.listen();
+	speechRec = new SoftwareSerial(rxPin, txPin);
+	speechRec->begin(9600);
+	speechRec->listen();
 }
 
 /**
@@ -53,9 +54,9 @@ Checks if speech recognizer has received a valid command, and if so indicates wh
 */
 bool getCommandSpeech(int& command)
 {
-	bool available = speechRec.available();
+	bool available = speechRec->available();
 	if (available)
-		command = speechRec.read();
+		command = speechRec->read();
 	
 	return available;
 }
