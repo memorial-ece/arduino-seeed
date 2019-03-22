@@ -1,6 +1,7 @@
 ////INCLUDE STATEMENTS
 // Including the header files for libraries with the functions we need for this library
 #include "barometer.h"
+#include "Grove_BMP280/Seeed_BMP280.h"
 
 
 ////GLOBAL VARIABLES
@@ -13,6 +14,7 @@ BMP280 *barometer; //Barometer
  */
 void bmpInit()
 {
+	barometer = new BMP280();	
 	barometer->init();
 }
 

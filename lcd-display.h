@@ -77,7 +77,4 @@ void lcdPrint(const char *);
 /**
  * Print a char to the LCD screen.
  */
- void lcdPrint(char c)
-{
-	lcd.print(c);
-}
+ void lcdPrint(char c);

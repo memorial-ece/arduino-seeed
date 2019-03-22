@@ -36,7 +36,7 @@ const char * speechCommands[] =
 Required to initialize speech recognizer - call in initProject()
 
 */
-void initCommandSpeech(int rxPin, int txPin)
+void speechInit(int rxPin, int txPin)
 {
 	speechRec = new SoftwareSerial(rxPin, txPin);
 	speechRec->begin(9600);
@@ -52,7 +52,7 @@ Checks if speech recognizer has received a valid command, and if so indicates wh
 
 @modifies command to hold int value corresponding to command received. Indexing of commands corresponds to list in speechCommands[]
 */
-bool getCommandSpeech(int& command)
+bool speechGetCommand(int& command)
 {
 	bool available = speechRec->available();
 	if (available)

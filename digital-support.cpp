@@ -45,7 +45,7 @@ void speakerPlayNote(int f, int port, float seconds)
   int time = 1000000.0 / (2 * f);
 
   //Send digital square wave to speaker with the calculated period
-  for (int i = 0; i < 100*seconds; i++)
+  for (int i = 0; i < 300*seconds; i++)
   {
     digitalWrite(port, HIGH);
     delayMicroseconds(time);

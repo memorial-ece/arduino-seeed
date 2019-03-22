@@ -24,7 +24,6 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include "analog-support.h"
 
 //Functions to support analog devices
 
@@ -35,17 +34,6 @@
  * 
  * @returns     celsius temperature reading
  */
-float tempGetCelsius(int reading)
-{
-	const int B = 4275;               // B value of the thermistor, from datasheet
-	const int R0 = 100000;            // R0 = 100k
-
-	float R = 1023.0 / reading - 1.0;
-	R = R0 * R;
-
-	float celsius = 1.0 / (log(R / R0) / B + 1 / 298.15) - 273.15; // conversion formula
-	
-	return celsius;
-}
+float tempGetCelsius(int reading);
 
 

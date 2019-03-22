@@ -1,7 +1,7 @@
 ////INCLUDE STATEMENTS
 // Including the header files for libraries with the functions we need for this library
 #include "segment-display.h"
-
+#include "Grove_4Digital_Display/TM1637.h"
 
 ////GLOBAL VARIABLES
 TM1637 * segDisplay; //4-digit 7-segment display
@@ -12,7 +12,7 @@ Required to initialize display - call in initProject()
 */
 void segmentInit(int pin)
 {
-	segDisplay = new TIM1637(pin, pin+1);
+	segDisplay = new TM1637(pin, pin+1);
 	segDisplay->init();
 	segDisplay->set(BRIGHT_TYPICAL);//BRIGHT_TYPICAL = 2,BRIGHT_DARKEST = 0,BRIGHTEST = 7;
 }

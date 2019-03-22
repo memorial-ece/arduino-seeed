@@ -1,6 +1,7 @@
 ////INCLUDE STATEMENTS
 // Including the header files for libraries with the functions we need for this library
-#include "engi1020rtc.h"
+#include "real-time-clock.h"
+#include "RTC_DS1307/DS1307.h"
 
 
 ////GLOBAL VARIABLES
@@ -33,9 +34,9 @@ Set initial time in rtc - will track from there
 @param second
 		@pre: 0 <= second <= 59
 
-@modifies	Time stored in RTC
+@modifies	  dists[0]Time stored in RTC
 */
-void setTimeRTC(unsigned int year, unsigned int month, unsigned int day, unsigned int dow, unsigned int hour, unsigned int minute, unsigned int second)
+void rtcSetTimeDate(unsigned int year, unsigned int month, unsigned int day, unsigned int dow, unsigned int hour, unsigned int minute, unsigned int second)
 {
 	rtClock->fillByYMD(year,month,day);
 	rtClock->fillByHMS(hour,minute,second);//15:28 30"
@@ -61,10 +62,10 @@ Get  date from rtc
 void rtcGetDate(unsigned int& year, unsigned int& month, unsigned int& day, unsigned int& dow, unsigned int& hour, unsigned int& minute, unsigned int& second)
 {
 	rtClock->getTime();
-	year = rtClock.year+2000;
-	month = rtClock.month;
-	day = rtClock.dayOfMonth;
-	dow = rtClock.dayOfWeek;
+	year = rtClock->year+2000;
+	month = rtClock->month;
+	day = rtClock->dayOfMonth;
+	dow = rtClock->dayOfWeek;
 }
 
 /**
@@ -82,9 +83,9 @@ Get  time from rtc
 */
 void rtcGetTime(unsigned int& hour, unsigned int& minute, unsigned int& second)
 {
-	rtClock.getTime();
+	rtClock->getTime();
 	
-	hour = rtClock.hour;
-	minute = rtClock.minute;
-	second = rtClock.second;
+	hour = rtClock->hour;
+	minute = rtClock->minute;
+	second = rtClock->second;
 }

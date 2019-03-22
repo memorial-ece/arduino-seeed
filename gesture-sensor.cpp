@@ -1,5 +1,7 @@
 #include "gesture-sensor.h"
 
+#include "Gesture_PAJ7620/paj7620.h"
+
 /**
 Initialiazes gesture sensor
 **/

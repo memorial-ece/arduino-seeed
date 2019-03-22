@@ -4,7 +4,7 @@
 #include <SoftwareSerial.h>
 #include "Arduino.h"
 
-#include "Seeed_BMP280.h"
+
 
 
 //Barometer (BMP280) functions and variables
