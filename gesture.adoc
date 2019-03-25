@@ -1,0 +1,69 @@
+---
+title: Gesture Sensor
+---
+
+The
+http://wiki.seeedstudio.com/Grove-Gesture_v1.0 [Grove Gesture Sensor]
+ integrates gesture recognition function with general I2C interface into a single chip. It can recognize 9 basic gestures, and these gestures information can be simply accessed via the I2C bus.You can use Gesture as an input device to control another grove, or a computer, mobile phone, smart car, robot, and more with a simple swipe of your hand.
+
+<!--more-->
+
+image::../gesture.png[Grove Gesture Sensor, width=300]
+
+
+== Hardware
+
+Plug the sensor into any of the I2C ports on your
+https://www.seeedstudio.com/Base-Shield-V2-p-1378.html[Grove shield]:
+
+image::../shield-i2c.png[I2C ports on the Grove shield v2.0, height=250]
+
+
+== Software
+
+Functions that interact with the barometer are prefixed with `gesture`.
+
+
+=== Initialization
+
+Before the gesture sensor can be used, you must connect it to an I2C port on the
+Grove shield and call the `gestureInit()` function:
+
+[source, language=C++]
+----
+/**
+ * Set up the gesture sensor for use.
+ *
+ * This function must be called before the sensor will work.
+ */
+void bmpInit();
+----
+
+This tells the software library that you are using a gesture sensor and that you
+have plugged in into an I2C port.
+You must call this function before anything else will work.
+
+
+=== Get Gesture Reading
+
+
+[source, language=C++]
+----
+/**
+Reads gesture sensor and returns value of gesture (or 0 if no gesture detected)
+	For more info see: http://wiki.seeedstudio.com/Grove-Gesture_v1.0/
+
+@returns	data = 0 if no gesture detected, otherwise the value of one of the CONSTANT VARIABLE VALUES below
+	Up Gesture, data = GES_UP_FLAG
+	Down Gesture, data = GES_DOWN_FLAG
+	Left Gesture, data = GES_LEFT_FLAG
+	Right Gesture, data = GES_RIGHT_FLAG
+	Forward Gesture, data = GES_FORWARD_FLAG
+	Backward Gesture, data = GES_BACKWARD_FLAG
+	Clockwise Gesture, data = GES_CLOCKWISE_FLAG
+	Count Clockwise Gesture, data = GES_COUNT_CLOCKWISE_FLAG
+	Wave Gesture, data = GES_WAVE_FLAG			
+
+*/
+unsigned int gestureRead()
+----
