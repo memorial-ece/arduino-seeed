@@ -71,8 +71,6 @@ When using the speech recognizer, we need to use the keyword "Hicell" to 'wake' 
 |Go	|22
 |===
 
-ads
-
 [source, language=C++]
 ----
 /**
