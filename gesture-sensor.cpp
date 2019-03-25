@@ -26,7 +26,7 @@ Reads gesture sensor and returns value of gesture (or 0 if no gesture detected)
 	Wave Gesture, data = GES_WAVE_FLAG			
 
 */
-unsigned int readGesture()
+unsigned int gestureRead()
 {
 	unsigned char gestureData = 0;  // Read Bank_0_Reg_0x43/0x44 for gesture result.
 

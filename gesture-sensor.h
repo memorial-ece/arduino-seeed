@@ -9,4 +9,4 @@
 unsigned int gestureInit();
 
 //Gesture sensor functions and variables
-unsigned int readGesture();
+unsigned int gestureRead();

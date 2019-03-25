@@ -34,7 +34,7 @@ Set initial time in rtc - will track from there
 @param second
 		@pre: 0 <= second <= 59
 
-@modifies	  dists[0]Time stored in RTC
+@modifies	  Time stored in RTC
 */
 void rtcSetTimeDate(unsigned int year, unsigned int month, unsigned int day, unsigned int dow, unsigned int hour, unsigned int minute, unsigned int second)
 {
@@ -57,9 +57,9 @@ Get  date from rtc
 	@pre: 1 <= dow <= 7
 
 
-@modifiesVariables passed in to store respective info
+@modifies	Variables passed in to store respective info
 */
-void rtcGetDate(unsigned int& year, unsigned int& month, unsigned int& day, unsigned int& dow, unsigned int& hour, unsigned int& minute, unsigned int& second)
+void rtcGetDate(unsigned int& year, unsigned int& month, unsigned int& day, unsigned int& dow)
 {
 	rtClock->getTime();
 	year = rtClock->year+2000;
