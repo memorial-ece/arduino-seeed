@@ -37,3 +37,4 @@
 #include "segment-display.h"
 #include "analog-support.h"
 #include "digital-support.h"
+#include "heart-rate.h"

@@ -22,6 +22,8 @@ SOURCE_FILES= \
 	analog-support.cpp \
 	digital-support.h \
 	digital-support.cpp \
+	heart-rate.h \
+	heart-rate.cpp \
 	Grove_Chainable_RGB_LED/ChainableLED.h \
 	Grove_Chainable_RGB_LED/ChainableLED.cpp \
 	Grove_LCD_RGB_Backlight/rgb_lcd.cpp \
