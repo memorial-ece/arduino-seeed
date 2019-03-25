@@ -10,8 +10,8 @@ SOURCE_FILES= \
 	Grove_LCD_RGB_Backlight/rgb_lcd.h \
 	Grove_LED_Bar/Grove_LED_Bar.cpp \
 	Grove_LED_Bar/Grove_LED_Bar.h \
-	Grove_PAJ7620/paj7620.cpp \
-	Grove_PAJ7620/paj7620.h \
+	Gesture_PAJ7620/paj7620.cpp \
+	Gesture_PAJ7620/paj7620.h \
 	Grove_Ultrasonic_Ranger/Ultrasonic.cpp \
 	Grove_Ultrasonic_Ranger/Ultrasonic.h \
 	RTC_DS1307/DS1307.cpp \
