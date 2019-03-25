@@ -2,13 +2,13 @@
 title: Real-Time Clock
 ---
 
-The
-http://wiki.seeedstudio.com/Grove-RTC [Barometer Sensor]
+The Grove
+http://wiki.seeedstudio.com/Grove-RTC[real-time clock (RTC)]
 provides seconds, minutes, hours, day, date, month, and year. The end of the month date is automatically adjusted for months with fewer than 31 days, including corrections for leap years. The clock operates in either the 24-hour or 12-hour format with AM/PM indicator. And it is valid up to 2100. In order to gain a robust performance, you must put a 3-Volt CR1225 lithium cell in the battery-holder. If you use the primary power only, the module may not work normally, because the crystal may not oscillate.
 
 <!--more-->
 
-image::../real-time-clock.jpeg[Grove Real-Time Clock, width=300]
+image::../real-time-clock.jpg[Grove Real-Time Clock, width=300]
 
 
 == Hardware

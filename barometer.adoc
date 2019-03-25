@@ -3,12 +3,12 @@ title: Barometer Sensor
 ---
 
 The
-http://wiki.seeedstudio.com/Grove-Barometer_Sensor-BMP280 [Barometer Sensor]
+http://wiki.seeedstudio.com/Grove-Barometer_Sensor-BMP280[Barometer Sensor]
 can be used to measure temperature and atmospheric pressure accurately. As the atmospheric pressure changes with altitude, it can also measure approximate altitude of a place.
 
 <!--more-->
 
-image::../BMP280.jpeg[Grove Baormeter Sensor BMP280, width=300]
+image::../BMP280.jpg[Grove Barometer Sensor BMP280, width=300]
 
 
 == Hardware

@@ -3,7 +3,7 @@ title: Gesture Sensor
 ---
 
 The
-http://wiki.seeedstudio.com/Grove-Gesture_v1.0 [Grove Gesture Sensor]
+http://wiki.seeedstudio.com/Grove-Gesture_v1.0[Grove Gesture Sensor]
  integrates gesture recognition function with general I2C interface into a single chip. It can recognize 9 basic gestures, and these gestures information can be simply accessed via the I2C bus.You can use Gesture as an input device to control another grove, or a computer, mobile phone, smart car, robot, and more with a simple swipe of your hand.
 
 <!--more-->
