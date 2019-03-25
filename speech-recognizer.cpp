@@ -36,9 +36,9 @@ const char * speechCommands[] =
 Required to initialize speech recognizer - call in initProject()
 
 */
-void speechInit(int rxPin, int txPin)
+void speechInit(int rxPin)
 {
-	speechRec = new SoftwareSerial(rxPin, txPin);
+	speechRec = new SoftwareSerial(rxPin, rxPin + 1);
 	speechRec->begin(9600);
 	speechRec->listen();
 }

@@ -6,7 +6,7 @@
 
 #include <SoftwareSerial.h>
 
-void speechInit(int rxPin, int txPin);
+void speechInit(int rxPin);
 bool speechGetCommand(int& command);
 
 
