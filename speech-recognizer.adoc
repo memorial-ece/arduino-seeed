@@ -1,0 +1,88 @@
+---
+title: Speech Recongizer
+---
+
+The
+http://wiki.seeedstudio.com/Grove-Speech_Recognizer[Grove Speech Recognizer]
+can recognize 22 pieces of commands including 'start', 'stop', 'Play music' and so on. Every time it recognizes a command, it will return a value.Here are some notes that you must know before using it: Awaken Word: Hicell (Please pronounce it as one word) When it recognizes the awaken word, LED turn red, then you can say the command word, if it recognize the command word, LED will turn blue.
+
+<!--more-->
+
+image::../speech-recognizer.png[Speech Recognizer, height=200]
+
+
+== Hardware
+
+The speech recognizer should be plugged into a **digital port** on your
+https://www.seeedstudio.com/Base-Shield-V2-p-1378.html[Grove shield]:
+
+image::../shield-digital.png[Digital ports on the Grove shield v2.0, height=250]
+
+
+== Software
+
+Functions that interact with the speech recognizer are prefixed with `speech`.
+
+
+=== Initialization
+
+To prepare the software library to use the speech recognizer, first call the
+`speechInit` function, telling it which pin it is connected to:
+
+[source, language=C++]
+----
+/**
+Required to initialize speech recognizer
+
+@param	pin Digital port to which component is connected
+
+*/
+void speechInit(int pin);
+----
+
+
+=== Get voice command
+
+When using the speech recognizer, we need to use the keyword "Hicell" to 'wake' the component; the red LED will light. We can say one of 22 commands that will be recognized, and the corresponding value will be returned when `speechGetCommand()` is called.
+
+|===
+|Command	|Value
+|Turn on the light	|1
+|Turn off the light	|2
+|Play music	|3
+|Pause	|4
+|Next	|5
+|Previous	|6
+|Up	|7
+|Down	|8
+|Turn on the TV	|9
+|Turn off the TV	|10
+|Increase temperature	|11
+|Decrease temperature	|12
+|What’s the time	|13
+|Open the door	|14
+|Close the door	|15
+|Left	|16
+|Right	|17
+|Stop	|18
+|Start	|19
+|Mode 1	|20
+|Mode 2	|21
+|Go	|22
+|====
+
+ads
+
+[source, language=C++]
+----
+/**
+Checks if speech recognizer has received a valid command, and if so indicates which
+
+@param command - Variable to hold int value corresponding to command received
+
+@returns	bool indicating if valid command received
+
+@modifies command to hold int value corresponding to command received. Indexing of commands corresponds to list in speechCommands[]
+*/
+bool speechGetCommand(int& command);
+----
