@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://memorial-ece.github.io/arduino-seeed/digits/</loc>
+  </url>
+  
+  <url>
+    <loc>https://memorial-ece.github.io/arduino-seeed/analog/</loc>
+  </url>
+  
+  <url>
+    <loc>https://memorial-ece.github.io/arduino-seeed/barometer/</loc>
+  </url>
+  
+  <url>
+    <loc>https://memorial-ece.github.io/arduino-seeed/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://memorial-ece.github.io/arduino-seeed/digital/</loc>
+  </url>
+  
+  <url>
+    <loc>https://memorial-ece.github.io/arduino-seeed/gesture/</loc>
+  </url>
+  
+  <url>
+    <loc>https://memorial-ece.github.io/arduino-seeed/heart-rate/</loc>
+  </url>
+  
+  <url>
+    <loc>https://memorial-ece.github.io/arduino-seeed/lcd-screen/</loc>
+  </url>
+  
+  <url>
+    <loc>https://memorial-ece.github.io/arduino-seeed/led-bar/</loc>
+  </url>
+  
+  <url>
+    <loc>https://memorial-ece.github.io/arduino-seeed/rgba/</loc>
+  </url>
+  
+  <url>
+    <loc>https://memorial-ece.github.io/arduino-seeed/rtc/</loc>
+  </url>
+  
+  <url>
+    <loc>https://memorial-ece.github.io/arduino-seeed/</loc>
+  </url>
+  
+  <url>
+    <loc>https://memorial-ece.github.io/arduino-seeed/servo/</loc>
+  </url>
+  
+  <url>
+    <loc>https://memorial-ece.github.io/arduino-seeed/speech/</loc>
+  </url>
+  
+  <url>
+    <loc>https://memorial-ece.github.io/arduino-seeed/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://memorial-ece.github.io/arduino-seeed/joystick/</loc>
+  </url>
+  
+  <url>
+    <loc>https://memorial-ece.github.io/arduino-seeed/ultrasonic/</loc>
+  </url>
+  
+</urlset>
