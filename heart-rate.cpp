@@ -11,6 +11,10 @@ unsigned long hrLastBeat;
 bool hrIntervalsReady=false;
 bool hrReset=false;
 
+#ifndef digitalPinToInterrupt
+#define digitalPinToInterrupt(pin) pin
+#endif
+
 /*Function: Interrupt service routine.Get the sigal from the external interrupt*/
 void interrupt()
 {
