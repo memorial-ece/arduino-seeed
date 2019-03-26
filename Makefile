@@ -31,9 +31,13 @@ SOURCE_FILES= \
 	lcd-display.h \
 	led-bar.cpp \
 	led-bar.h \
+	real-time-clock.cpp \
+	real-time-clock.h \
 	rgba-leds.cpp \
 	rgba-leds.h \
 	seeed-kit.h \
+	segment-display.cpp \
+	segment-display.h \
 	servo-motor.cpp \
 	servo-motor.h \
 	speech-recognizer.cpp \
@@ -41,6 +45,7 @@ SOURCE_FILES= \
 	submodules.cpp \
 	ultrasonic-distance.cpp \
 	ultrasonic-distance.h \
+	
 
 all: zip
 clean:
