@@ -13,7 +13,7 @@ image:light-sensor.jpeg[Light sensor, height=200]
 == Hardware
 
 Analog component can include the rotary dial, light sensor, servo or others.
-Unlike link:{{% relref "/digital" %}}[digital components], which are either "on"
+Unlike link:{{% relref "../digital" %}}[digital components], which are either "on"
 or "off", analog components can either generate or accept a signal anywhere in a
 range of values (in our case, anywhere between 0 and 5 Volts).
 These components are connected to one of the analog ("A") ports on the Grove
