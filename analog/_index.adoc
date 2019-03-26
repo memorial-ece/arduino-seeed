@@ -1,5 +1,5 @@
 ---
-title: Analog components
+title: Analog components (generic)
 ---
 
 Generic analog components are all accessed via a common set of {cpp} functions.

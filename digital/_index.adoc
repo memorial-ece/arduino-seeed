@@ -1,5 +1,5 @@
 ---
-title: Digital components
+title: Digital components (generic)
 ---
 
 Simple digital components can either be _on_ or _off_.
