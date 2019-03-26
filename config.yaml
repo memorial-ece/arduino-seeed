@@ -1,0 +1,29 @@
+baseURL: "https://memorial-ece.github.io/arduino-seeed/"
+languageCode: "en-ca"
+title: "Arduino Seeed Library"
+
+outputs:
+  home:
+    - HTML
+    - RSS
+
+theme: docdock
+
+pygmentsCodeFences: true
+pygmentsUseClasses: true
+
+params:
+  highlightClientSide: true
+  themeStyle: original
+  extra_style:
+    - extra.css
+
+menu:
+  shortcuts:
+    - pre: '<h3>Links:</h3>'
+      name: "<i class='fa fa-home'></i> <label>Course website</label>"
+      url: "https://www.engr.mun.ca/~anderson/teaching/1020"
+      weight: 10
+    - name: "<i class='fa fa-github'></i> <label>Github repository</label>"
+      url: "https://github.com/memorial-ece/arduino-seeed"
+      weight: 11
