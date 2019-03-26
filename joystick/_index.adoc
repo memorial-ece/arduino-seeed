@@ -4,12 +4,12 @@ title: Thumb Joystick
 ---
 
 The
-http://wiki.seeedstudio.com/Grove-Thumb_Joystick/[Thumb Joystick]
+http://wiki.seeedstudio.com/Grove-Thumb_Joystick/[Grove Thumb Joystick]
 is an link:{{% relref "/analog" %}}[analog device] that connects to one analog port on the Grove shield but uses two analog pins on the Arduino to get X and Y components of the joystick's movement.
 
 <!--more-->
 
-image::../thumb-joystick.jpeg[Thumb Joystick, width=250]
+image::thumb-joystick.jpeg[Thumb Joystick, width=250]
 
 The X and Y axes are two ~10k potentiometers which control 2D movement by generating analog signals. The joystick also has a push button that could be used for special applications. It will output two analog values, representing two directions.
 

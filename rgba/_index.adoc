@@ -8,7 +8,7 @@ can be chained together to create a string of colour-changing lights.
 
 <!--more-->
 
-image::../rgba-led.jpeg[Chainable RGBA LED, width=250]
+image::rgba-led.jpeg[Chainable RGBA LED]
 
 == Hardware
 

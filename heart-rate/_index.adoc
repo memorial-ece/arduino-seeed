@@ -9,7 +9,7 @@ can be used to monitor heart rate of patients and athletes. The entire system is
 
 <!--more-->
 
-image::../heart-rate.jpg[Heart Rate Sensor, height=200]
+image::heart-rate.jpg[Heart Rate Sensor]
 
 
 == Hardware

@@ -8,9 +8,9 @@ Interacting with them is straightforward.
 <!--more-->
 
 [.centered]
-image:../button.jpeg[Button, height=150]
-image:../led-socket.jpeg[LED socket, height=150]
-image:../relay.jpeg[Relay, height=150]
+image:button.jpeg[Button, height=150]
+image:led-socket.jpeg[LED socket, height=150]
+image:relay.jpeg[Relay, height=150]
 
 == Hardware
 

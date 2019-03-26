@@ -8,7 +8,7 @@ is a typical "digital watch" interface that is a nice choice for projects requir
 
 <!--more-->
 
-image::../digit-display.jpg[LED Bar, height=200]
+image::digit-display.jpg[LED Bar]
 
 
 == Hardware

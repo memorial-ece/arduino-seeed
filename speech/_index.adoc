@@ -8,7 +8,7 @@ can recognize 22 pieces of commands including 'start', 'stop', 'Play music' and 
 
 <!--more-->
 
-image::../speech-recognizer.png[Speech Recognizer, height=200]
+image::speech-recognizer.png[Speech Recognizer]
 
 
 == Hardware

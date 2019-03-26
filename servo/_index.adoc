@@ -8,7 +8,7 @@ can be used to control rotary position within an 180-degree range.
 
 <!--more-->
 
-image::../servo.jpeg[Servo, height=200]
+image::servo.jpeg[Servo, height=200]
 
 
 == Hardware

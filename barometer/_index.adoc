@@ -1,5 +1,5 @@
 ---
-title: Barometer Sensor
+title: Barometer
 ---
 
 The
@@ -8,7 +8,7 @@ can be used to measure temperature and atmospheric pressure accurately. As the a
 
 <!--more-->
 
-image::../BMP280.jpg[Grove Barometer Sensor BMP280, width=300]
+image::BMP280.jpg[Grove Barometer Sensor BMP280]
 
 
 == Hardware

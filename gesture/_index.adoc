@@ -8,7 +8,7 @@ http://wiki.seeedstudio.com/Grove-Gesture_v1.0[Grove Gesture Sensor]
 
 <!--more-->
 
-image::../gesture.png[Grove Gesture Sensor, width=300]
+image::gesture.png[Grove Gesture Sensor]
 
 
 == Hardware
