@@ -16,7 +16,7 @@ image:digital/button.jpeg[Button, height=100]
 image:digital/led-socket.jpeg[LED socket, height=100]
 image:digital/relay.jpeg[Relay, height=100]
 
-link:{{% ref "/components" %}}[Specialized components] for the Grove kit
+link:{{% ref "../components" %}}[Specialized components] for the Grove kit
 require specialized software libraries.
 However, generic link:{{% relref "./analog" %}}[analog] and
 link:{{% relref "./digital" %}}[digital] components can be used via generic
