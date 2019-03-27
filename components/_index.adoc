@@ -6,4 +6,6 @@ weight: 2
 Many of the components that are used with the Grove kit require specialized
 software libraries.
 
+<!--more-->
+
 {{% children description="true" sort="Weight" %}}
