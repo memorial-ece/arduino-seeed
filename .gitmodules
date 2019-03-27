@@ -5,3 +5,7 @@
 	path = content
 	url = https://github.com/memorial-ece/arduino-seeed
 	branch = docs
+[submodule "public"]
+	path = public
+	url = https://github.com/memorial-ece/arduino-seeed
+	branch = gh-pages
