@@ -1,0 +1,24 @@
+---
+title: Generic components
+weight: 1
+alwaysopen: true
+---
+
+Many of the components that are included in the Grove kit can be used with
+generic (rather than device-specific) software support.
+
+<!--more-->
+
+[.centered]
+image:analog/rotary-dial.jpeg[Rotary dial, height=100]
+image:analog/light-sensor.jpeg[Light sensor, height=100]
+image:digital/button.jpeg[Button, height=100]
+image:digital/led-socket.jpeg[LED socket, height=100]
+image:digital/relay.jpeg[Relay, height=100]
+
+link:{{% ref "/components" %}}[Specialized components] for the Grove kit
+require specialized software libraries.
+However, generic link:{{% relref "./analog" %}}[analog] and
+link:{{% relref "./digital" %}}[digital] components can be used via generic
+Arduino library functions such as
+`analogRead` and `digitalWrite`.

@@ -1,0 +1,9 @@
+---
+title: Specialized components
+weight: 2
+---
+
+Many of the components that are used with the Grove kit require specialized
+software libraries.
+
+{{% children description="true" sort="Weight" %}}

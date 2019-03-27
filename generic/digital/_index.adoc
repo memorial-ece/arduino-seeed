@@ -1,5 +1,5 @@
 ---
-title: Digital components (generic)
+title: Digital
 ---
 
 Simple digital components can either be _on_ or _off_.
@@ -18,7 +18,7 @@ Digital components can include buttons, single-LED sockets, relays and more.
 These components are connected to one of the digital ("D") ports on the Grove
 shield:
 
-image::../shield-digital.png[Digital ports on the Grove shield v2.0, height=250]
+image::../../shield-digital.png[Digital ports on the Grove shield v2.0, height=250]
 
 
 == Software

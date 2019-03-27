@@ -18,7 +18,7 @@ Multiple
 http://wiki.seeedstudio.com/Grove-Chainable_RGB_LED[RGBA LEDs] can be chained
 together by connecting one to one of the digital ports on the Grove shield:
 
-image::../shield-digital.png[Digital ports on the Grove shield v2.0, height=250]
+image::../../shield-digital.png[Digital ports on the Grove shield v2.0, height=250]
 
 and then connecting several LEDS' "in" and "out" ports together.
 

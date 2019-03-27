@@ -5,7 +5,7 @@ title: Thumb Joystick
 
 The
 http://wiki.seeedstudio.com/Grove-Thumb_Joystick/[Grove Thumb Joystick]
-is an link:{{% relref "../analog" %}}[analog device] that connects to one analog port on the Grove shield but uses two analog pins on the Arduino to get X and Y components of the joystick's movement.
+is an link:{{% relref "/generic/analog" %}}[analog device] that connects to one analog port on the Grove shield but uses two analog pins on the Arduino to get X and Y components of the joystick's movement.
 
 <!--more-->
 
@@ -17,7 +17,7 @@ The X and Y axes are two ~10k potentiometers which control 2D movement by genera
 
 The
 http://wiki.seeedstudio.com/Grove-Thumb_Joystick/[Thumb Joystick]
-is an link:{{% relref "../analog" %}}[analog device] that connects to one analog port on the Grove shield but uses two analog pins on the Arduino to get X and Y components of the joystick's movement:
+is an link:{{% relref "/generic/analog" %}}[analog device] that connects to one analog port on the Grove shield but uses two analog pins on the Arduino to get X and Y components of the joystick's movement:
 
 image::../shield-analog.png[Analog ports on the Grove shield v2.0, height=250]
 

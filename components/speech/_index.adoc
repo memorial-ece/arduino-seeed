@@ -16,7 +16,7 @@ image::speech-recognizer.png[Speech Recognizer]
 The speech recognizer should be plugged into a **digital port** on your
 https://www.seeedstudio.com/Base-Shield-V2-p-1378.html[Grove shield]:
 
-image::../shield-digital.png[Digital ports on the Grove shield v2.0, height=250]
+image::../../shield-digital.png[Digital ports on the Grove shield v2.0, height=250]
 
 
 == Software
