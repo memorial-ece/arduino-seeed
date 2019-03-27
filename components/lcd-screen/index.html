@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-	<meta name="generator" content="Hugo 0.53" />
     <title>Arduino Seeed Library</title>
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="revised" content="2019-03-27T10:26:50 NDT">
-<title>Seeed Studio for Arduino :: Arduino Seeed Library</title>
+<title>LCD screen :: Arduino Seeed Library</title>
 <link rel="shortcut icon" href="/arduino-seeed/images/favicon.png" type="image/x-icon" />
 <link href="/arduino-seeed/css/nucleus.css" rel="stylesheet">
 <link href="/arduino-seeed/css/font-awesome.min.css" rel="stylesheet">
@@ -27,7 +26,7 @@
 <link rel="stylesheet" type="text/css" href="https://memorial-ece.github.io/arduino-seeed/extra.css"/>
     
   </head>
-  <body data-url="/arduino-seeed/">
+  <body data-url="/arduino-seeed/components/lcd-screen/">
     
       <div id="headermain"></div>
 <nav id="sidebar" class="">
@@ -85,10 +84,11 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/arduino-seeed/components/" class="dd-item haschildren
+    <li data-nav-id="/arduino-seeed/components/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/arduino-seeed/components/">Specialized components</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/arduino-seeed/components/">Specialized components</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
     <li data-nav-id="/arduino-seeed/components/digits/" class="dd-item
@@ -115,7 +115,7 @@
       <a href="/arduino-seeed/components/heart-rate/">Heart Rate Sensor</a>
       </div>
     </li>
-    <li data-nav-id="/arduino-seeed/components/lcd-screen/" class="dd-item
+    <li data-nav-id="/arduino-seeed/components/lcd-screen/" class="dd-item parent active
         ">
       <div>
       <a href="/arduino-seeed/components/lcd-screen/">LCD screen</a>
@@ -189,8 +189,47 @@
 <div id="overlay"></div>
 <div class="padding highlightable">
 
+  <div id="top-bar">
+    <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+        <span id="sidebar-toggle-span">
+          <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+            <i class="fa fa-bars"></i>
+          </a>
+        </span>
+        <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+        <span class="links">
+        
+
+
+
+
+
+
+
+ <a href='/arduino-seeed/'>Seeed Studio for Arduino</a> > <a href='/arduino-seeed/components/'>Specialized components</a> > LCD screen
+
+ 
+
+ 
+
+   
+        </span>
+    </div>
+    
+    
+    <div class="progress">
+        <div class="wrapper">
+    
+        </div>
+    </div>
+    
+
+  </div>
+
 
 <div id="body-inner">
+  
+    <h1>LCD screen</h1>
   
 
 
@@ -198,68 +237,147 @@
     
     
     
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
- 
+
 <div class="paragraph">
-<p>This is a software library for interacting with the
-<a href="https://www.seeedstudio.com/Grove-Starter-Kit-for-Arduino-p-1855.html">
-  Seeed Studio Grove Starter Kit for Arduino</a>.</p>
+<p>The
+<a href="http://wiki.seeedstudio.com/Grove-LCD_RGB_Backlight">RGB-backlit LCD screen</a>
+can display text in two rows of up to 16 characters each,
+backlit with an RGB (red-green-blue) LED capable of displaying
+16.7M individual colours.</p>
 </div>
-<div class="paragraph">
-<p>We are using the
-<a href="https://www.seeedstudio.com/Grove-Starter-Kit-for-Arduino-p-1855.html">
-  Seeed Studio Grove Starter Kit for Arduino</a>
-in all of our labs for the course
-<a href="https://www.engr.mun.ca/~anderson/teaching/1020">
-  ENGI 1020: Introduction to Programming</a>.
-The kit includes a variety of components that plug into the analog, digital and
-I2C ports of the
-<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html">Grove shield</a>,
-which is itself plugged into an Arduino Uno board:</p>
+<div class="imageblock">
+<div class="content">
+<img src="lcd-screen.jpeg" alt="Grove RGB-backlit LCD screen">
 </div>
-<div class="paragraph centered">
-<p><span class="image"><img src="https://www.active-robots.com/media/catalog/product/cache/1/image/800x/9df78eab33525d08d6e5fb8d27136e95/b/a/base-shield-v2.jpg" alt="Grove Base Shield (courtesy of Active Robots)" width="300"></span>
-<span class="image"><img src="https://cdn.sparkfun.com//assets/parts/6/3/4/3/11021-01.jpg" alt="Arduino Uno (courtesy of SparkFun)" width="300"></span></p>
 </div>
 <div class="sect1">
-<h2 id="_components">Components</h2>
+<h2 id="_hardware">Hardware</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Each component in the kit requires some software interaction, which is supported
-by the functions in this library (and the libraries it uses).</p>
+<p>Plug the LCD screen into any of the I2C ports on your
+<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html">Grove shield</a>:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../shield-i2c.png" alt="I2C ports on the Grove shield v2.0" height="250">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_software">Software</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Functions that interact with the LCD screen are prefixed with <code>lcd</code>.</p>
+</div>
+<div class="sect2">
+<h3 id="_initialization">Initialization</h3>
+<div class="paragraph">
+<p>Before the LCD display can be used, you must connect it to an I2C port on the
+Grove shield and call the <code>lcdInit()</code> function:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-C++" data-lang="C++">/**
+ * Set up the LCD screen for use.
+ *
+ * This function must be called before any of the other LCD functions will work.
+ */
+void lcdInit();</code></pre>
+</div>
 </div>
 <div class="paragraph">
-
-
-<ul class="children children-li">
-
-<span><li>
-		<a href="/arduino-seeed/generic/" >Generic components</a></li>
-<p><div class="paragraph">
-<p>Many of the components that are included in the Grove kit can be used with
-generic (rather than device-specific) software support.</p>
-</div></p>
-</span>
-
-<span><li>
-		<a href="/arduino-seeed/components/" >Specialized components</a></li>
-<p>Many of the components that are used with the Grove kit require specialized software libraries.
-  4-Digit Display The Grove 4-Digit Display is a typical "digital watch" interface that is a nice choice for projects requiring alpha-numeric display.
-
-  Barometer The Barometer Sensor can be used to measure temperature and atmospheric pressure accurately. As the atmospheric pressure changes with altitude, it can also measure approximate altitude of a place.</p>
-</span>
-</ul>
-
-
-
-
-
+<p>This tells the software library that you are using an LCD screen and that you
+have plugged in into an I2C port.
+You must call this function before anything else will work.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_backlight_control">Backlight control</h3>
+<div class="paragraph">
+<p>The colour of the backlight can be modified with the <code>lcdBacklightColour()</code>
+function.
+This function allows the amount of red, green and blue light that should be
+emitted by the backlight, where each of these (additive) primary colours is
+given as an integer in the range [0,255].
+You may find
+<a href="https://www.w3schools.com/colors/colors_rgb.asp">this colour tool</a>
+helpful when choosing a colour.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-C++" data-lang="C++">/**
+ * Change the colour of the LCD backlight.
+ *
+ * @param    red      how red the backlight should be: [0,255]
+ * @param    green    how green the backlight should be: [0,255]
+ * @param    blue     how blue the backlight should be: [0,255]
+ */
+void lcdBacklightColour(int red, int green, int blue);</code></pre>
 </div>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_text_output">Text output</h3>
+<div class="paragraph">
+<p>Text is displayed (or cleared!) on the LCD screen using the following functions.
+Unlike the console in a conventional C&#43;&#43; program, the newline character
+(<code>\n</code>) has no effect on this LCD screen.
+Instead, we need to control the cursor location explicitly.</p>
+</div>
+<div class="paragraph">
+<p>To erase the screen&#8217;s current contents and reset the cursor to the top-left
+of the screen, call <code>lcdClear()</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-C++" data-lang="C++">/**
+ * Clear all text from the LCD screen and reset the cursor to the top-left
+ * of the screen.
+ */
+void lcdClear();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To output text to the screen, pass an integer or a string to one of the
+<code>lcdPrint</code> functions:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-C++" data-lang="C++">/**
+ * Print an integer to the LCD screen.
+ *
+ * @param    n         the value to print to the screen
+ */
+void lcdPrint(int n);
 
+/**
+ * Print a string to the LCD screen.
+ *
+ * @param    message   the text to print to the LCD screen, starting from the
+ *                     current cursor location
+ */
+void lcdPrint(String message);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can move the cursor (from which new printing will happen) to any location
+on the screen using the <code>lcdMoveCursor</code> function:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-C++" data-lang="C++">/**
+ * Move the cursor to a specific location.
+ *
+ * @param    int x     Row on the LCD screen @pre range: [0, 1]
+ * @param    int y     Column on the LCD screen @pre range: [0, 15]
+ */
+void lcdMoveCursor(int x, int y);</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 
 
     
@@ -271,7 +389,8 @@ generic (rather than device-specific) software support.</p>
 </div>
 
 <div id="navigation">
-<a class="nav nav-next" href="/arduino-seeed/generic/" title="Generic components" style="margin-right: 0px;"><label>Generic components</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/arduino-seeed/components/heart-rate/" title="Heart Rate Sensor"> <i class="fa fa-chevron-left"></i><label>Heart Rate Sensor</label></a>
+    <a class="nav nav-next" href="/arduino-seeed/components/led-bar/" title="LED bar" style="margin-right: 0px;"><label>LED bar</label><i class="fa fa-chevron-right"></i></a></div>
 
 </section>
 <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">

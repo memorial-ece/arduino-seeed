@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-	<meta name="generator" content="Hugo 0.53" />
     <title>Arduino Seeed Library</title>
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="revised" content="2019-03-27T10:26:50 NDT">
-<title>Seeed Studio for Arduino :: Arduino Seeed Library</title>
+<title>Specialized components :: Arduino Seeed Library</title>
 <link rel="shortcut icon" href="/arduino-seeed/images/favicon.png" type="image/x-icon" />
 <link href="/arduino-seeed/css/nucleus.css" rel="stylesheet">
 <link href="/arduino-seeed/css/font-awesome.min.css" rel="stylesheet">
@@ -27,7 +26,7 @@
 <link rel="stylesheet" type="text/css" href="https://memorial-ece.github.io/arduino-seeed/extra.css"/>
     
   </head>
-  <body data-url="/arduino-seeed/">
+  <body data-url="/arduino-seeed/components/">
     
       <div id="headermain"></div>
 <nav id="sidebar" class="">
@@ -85,10 +84,11 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/arduino-seeed/components/" class="dd-item haschildren
+    <li data-nav-id="/arduino-seeed/components/" class="dd-item parent active haschildren
         ">
       <div>
-      <a href="/arduino-seeed/components/">Specialized components</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/arduino-seeed/components/">Specialized components</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
     <li data-nav-id="/arduino-seeed/components/digits/" class="dd-item
@@ -189,8 +189,42 @@
 <div id="overlay"></div>
 <div class="padding highlightable">
 
+  <div id="top-bar">
+    <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+        <span id="sidebar-toggle-span">
+          <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+            <i class="fa fa-bars"></i>
+          </a>
+        </span>
+        <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+        <span class="links">
+        
+
+
+
+
+ <a href='/arduino-seeed/'>Seeed Studio for Arduino</a> > Specialized components
+
+ 
+
+   
+        </span>
+    </div>
+    
+    
+    <div class="progress">
+        <div class="wrapper">
+    
+        </div>
+    </div>
+    
+
+  </div>
+
 
 <div id="body-inner">
+  
+    <h1>Specialized components</h1>
   
 
 
@@ -198,37 +232,10 @@
     
     
     
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
- 
+
 <div class="paragraph">
-<p>This is a software library for interacting with the
-<a href="https://www.seeedstudio.com/Grove-Starter-Kit-for-Arduino-p-1855.html">
-  Seeed Studio Grove Starter Kit for Arduino</a>.</p>
-</div>
-<div class="paragraph">
-<p>We are using the
-<a href="https://www.seeedstudio.com/Grove-Starter-Kit-for-Arduino-p-1855.html">
-  Seeed Studio Grove Starter Kit for Arduino</a>
-in all of our labs for the course
-<a href="https://www.engr.mun.ca/~anderson/teaching/1020">
-  ENGI 1020: Introduction to Programming</a>.
-The kit includes a variety of components that plug into the analog, digital and
-I2C ports of the
-<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html">Grove shield</a>,
-which is itself plugged into an Arduino Uno board:</p>
-</div>
-<div class="paragraph centered">
-<p><span class="image"><img src="https://www.active-robots.com/media/catalog/product/cache/1/image/800x/9df78eab33525d08d6e5fb8d27136e95/b/a/base-shield-v2.jpg" alt="Grove Base Shield (courtesy of Active Robots)" width="300"></span>
-<span class="image"><img src="https://cdn.sparkfun.com//assets/parts/6/3/4/3/11021-01.jpg" alt="Arduino Uno (courtesy of SparkFun)" width="300"></span></p>
-</div>
-<div class="sect1">
-<h2 id="_components">Components</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Each component in the kit requires some software interaction, which is supported
-by the functions in this library (and the libraries it uses).</p>
+<p>Many of the components that are used with the Grove kit require specialized
+software libraries.</p>
 </div>
 <div class="paragraph">
 
@@ -236,19 +243,115 @@ by the functions in this library (and the libraries it uses).</p>
 <ul class="children children-li">
 
 <span><li>
-		<a href="/arduino-seeed/generic/" >Generic components</a></li>
+		<a href="/arduino-seeed/components/digits/" >4-Digit Display</a></li>
 <p><div class="paragraph">
-<p>Many of the components that are included in the Grove kit can be used with
-generic (rather than device-specific) software support.</p>
+<p>The
+<a href="http://wiki.seeedstudio.com/Grove-4-Digit_Display">Grove 4-Digit Display</a>
+is a typical "digital watch" interface that is a nice choice for projects requiring alpha-numeric display.</p>
 </div></p>
 </span>
 
 <span><li>
-		<a href="/arduino-seeed/components/" >Specialized components</a></li>
-<p>Many of the components that are used with the Grove kit require specialized software libraries.
-  4-Digit Display The Grove 4-Digit Display is a typical "digital watch" interface that is a nice choice for projects requiring alpha-numeric display.
+		<a href="/arduino-seeed/components/barometer/" >Barometer</a></li>
+<p><div class="paragraph">
+<p>The
+<a href="http://wiki.seeedstudio.com/Grove-Barometer_Sensor-BMP280">Barometer Sensor</a>
+can be used to measure temperature and atmospheric pressure accurately. As the atmospheric pressure changes with altitude, it can also measure approximate altitude of a place.</p>
+</div></p>
+</span>
 
-  Barometer The Barometer Sensor can be used to measure temperature and atmospheric pressure accurately. As the atmospheric pressure changes with altitude, it can also measure approximate altitude of a place.</p>
+<span><li>
+		<a href="/arduino-seeed/components/gesture/" >Gesture Sensor</a></li>
+<p><div class="paragraph">
+<p>The
+<a href="http://wiki.seeedstudio.com/Grove-Gesture_v1.0">Grove Gesture Sensor</a>
+ integrates gesture recognition function with general I2C interface into a single chip. It can recognize 9 basic gestures, and these gestures information can be simply accessed via the I2C bus.You can use Gesture as an input device to control another grove, or a computer, mobile phone, smart car, robot, and more with a simple swipe of your hand.</p>
+</div></p>
+</span>
+
+<span><li>
+		<a href="/arduino-seeed/components/heart-rate/" >Heart Rate Sensor</a></li>
+<p><div class="paragraph">
+<p>The
+<a href="http://wiki.seeedstudio.com/Grove-Ear-clip_Heart_Rate_Sensor">
+  Grove Ear-clip Heart Rate Sensor</a>
+can be used to monitor heart rate of patients and athletes. The entire system is a high sensitivity, low power consumption and portable.</p>
+</div></p>
+</span>
+
+<span><li>
+		<a href="/arduino-seeed/components/lcd-screen/" >LCD screen</a></li>
+<p><div class="paragraph">
+<p>The
+<a href="http://wiki.seeedstudio.com/Grove-LCD_RGB_Backlight">RGB-backlit LCD screen</a>
+can display text in two rows of up to 16 characters each,
+backlit with an RGB (red-green-blue) LED capable of displaying
+16.7M individual colours.</p>
+</div></p>
+</span>
+
+<span><li>
+		<a href="/arduino-seeed/components/led-bar/" >LED bar</a></li>
+<p><div class="paragraph">
+<p>The
+<a href="http://wiki.seeedstudio.com/Grove-LED_Bar">Grove LED bar</a>
+includes multiple LEDs that can be turned on or off independently and can be
+used to represent a kind of bar graph.</p>
+</div></p>
+</span>
+
+<span><li>
+		<a href="/arduino-seeed/components/rgba/" >RGBA LED</a></li>
+<p><div class="paragraph">
+<p>Multiple
+<a href="http://wiki.seeedstudio.com/Grove-Chainable_RGB_LED">RGBA LEDs</a>
+can be chained together to create a string of colour-changing lights.</p>
+</div></p>
+</span>
+
+<span><li>
+		<a href="/arduino-seeed/components/rtc/" >Real-Time Clock</a></li>
+<p><div class="paragraph">
+<p>The
+<a href="http://wiki.seeedstudio.com/Grove-RTC">Grove real-time clock (RTC)</a>
+provides seconds, minutes, hours, day, date, month, and year. The end of the month date is automatically adjusted for months with fewer than 31 days, including corrections for leap years. The clock operates in either the 24-hour or 12-hour format with AM/PM indicator. And it is valid up to 2100. In order to gain a robust performance, you must put a 3-Volt CR1225 lithium cell in the battery-holder. If you use the primary power only, the module may not work normally, because the crystal may not oscillate.</p>
+</div></p>
+</span>
+
+<span><li>
+		<a href="/arduino-seeed/components/servo/" >Servomotor</a></li>
+<p><div class="paragraph">
+<p>The
+<a href="https://www.seeedstudio.com/Grove-Servo-p-1241.html">Grove servomotor</a>
+can be used to control rotary position within an 180-degree range.</p>
+</div></p>
+</span>
+
+<span><li>
+		<a href="/arduino-seeed/components/speech/" >Speech Recognizer</a></li>
+<p><div class="paragraph">
+<p>The
+<a href="http://wiki.seeedstudio.com/Grove-Speech_Recognizer">Grove Speech Recognizer</a>
+can recognize 22 pieces of commands including 'start', 'stop', 'Play music' and so on. Every time it recognizes a command, it will return a value.Here are some notes that you must know before using it: Awaken Word: Hicell (Please pronounce it as one word) When it recognizes the awaken word, LED turn red, then you can say the command word, if it recognize the command word, LED will turn blue.</p>
+</div></p>
+</span>
+
+<span><li>
+		<a href="/arduino-seeed/components/joystick/" >Thumb Joystick</a></li>
+<p><div class="paragraph">
+<p>The
+<a href="http://wiki.seeedstudio.com/Grove-Thumb_Joystick/">Grove Thumb Joystick</a>
+is an <a href="/arduino-seeed/generic/analog/">analog device</a> that connects to one analog port on the Grove shield but uses two analog pins on the Arduino to get X and Y components of the joystick&#8217;s movement.</p>
+</div></p>
+</span>
+
+<span><li>
+		<a href="/arduino-seeed/components/ultrasonic/" >Ultrasonic Ranger</a></li>
+<p><div class="paragraph">
+<p>The
+<a href="http://wiki.seeedstudio.com/Grove-Ultrasonic_Ranger">Grove Ultrasonic Ranger</a>
+is a non-contact distance measurement module. It has a measuring range of 2 - 350cm, with a resolution of 1cm.</p>
+</div></p>
 </span>
 </ul>
 
@@ -256,8 +359,6 @@ generic (rather than device-specific) software support.</p>
 
 
 
-</div>
-</div>
 </div>
 
 
@@ -271,7 +372,8 @@ generic (rather than device-specific) software support.</p>
 </div>
 
 <div id="navigation">
-<a class="nav nav-next" href="/arduino-seeed/generic/" title="Generic components" style="margin-right: 0px;"><label>Generic components</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/arduino-seeed/generic/digital/" title="Digital"> <i class="fa fa-chevron-left"></i><label>Digital</label></a>
+    <a class="nav nav-next" href="/arduino-seeed/components/digits/" title="4-Digit Display" style="margin-right: 0px;"><label>4-Digit Display</label><i class="fa fa-chevron-right"></i></a></div>
 
 </section>
 <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">

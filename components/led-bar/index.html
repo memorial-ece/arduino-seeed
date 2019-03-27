@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-	<meta name="generator" content="Hugo 0.53" />
     <title>Arduino Seeed Library</title>
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="revised" content="2019-03-27T10:26:50 NDT">
-<title>Seeed Studio for Arduino :: Arduino Seeed Library</title>
+<title>LED bar :: Arduino Seeed Library</title>
 <link rel="shortcut icon" href="/arduino-seeed/images/favicon.png" type="image/x-icon" />
 <link href="/arduino-seeed/css/nucleus.css" rel="stylesheet">
 <link href="/arduino-seeed/css/font-awesome.min.css" rel="stylesheet">
@@ -27,7 +26,7 @@
 <link rel="stylesheet" type="text/css" href="https://memorial-ece.github.io/arduino-seeed/extra.css"/>
     
   </head>
-  <body data-url="/arduino-seeed/">
+  <body data-url="/arduino-seeed/components/led-bar/">
     
       <div id="headermain"></div>
 <nav id="sidebar" class="">
@@ -85,10 +84,11 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/arduino-seeed/components/" class="dd-item haschildren
+    <li data-nav-id="/arduino-seeed/components/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/arduino-seeed/components/">Specialized components</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/arduino-seeed/components/">Specialized components</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
     <li data-nav-id="/arduino-seeed/components/digits/" class="dd-item
@@ -121,7 +121,7 @@
       <a href="/arduino-seeed/components/lcd-screen/">LCD screen</a>
       </div>
     </li>
-    <li data-nav-id="/arduino-seeed/components/led-bar/" class="dd-item
+    <li data-nav-id="/arduino-seeed/components/led-bar/" class="dd-item parent active
         ">
       <div>
       <a href="/arduino-seeed/components/led-bar/">LED bar</a>
@@ -189,8 +189,47 @@
 <div id="overlay"></div>
 <div class="padding highlightable">
 
+  <div id="top-bar">
+    <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+        <span id="sidebar-toggle-span">
+          <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+            <i class="fa fa-bars"></i>
+          </a>
+        </span>
+        <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+        <span class="links">
+        
+
+
+
+
+
+
+
+ <a href='/arduino-seeed/'>Seeed Studio for Arduino</a> > <a href='/arduino-seeed/components/'>Specialized components</a> > LED bar
+
+ 
+
+ 
+
+   
+        </span>
+    </div>
+    
+    
+    <div class="progress">
+        <div class="wrapper">
+    
+        </div>
+    </div>
+    
+
+  </div>
+
 
 <div id="body-inner">
+  
+    <h1>LED bar</h1>
   
 
 
@@ -198,68 +237,90 @@
     
     
     
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
- 
+
 <div class="paragraph">
-<p>This is a software library for interacting with the
-<a href="https://www.seeedstudio.com/Grove-Starter-Kit-for-Arduino-p-1855.html">
-  Seeed Studio Grove Starter Kit for Arduino</a>.</p>
+<p>The
+<a href="http://wiki.seeedstudio.com/Grove-LED_Bar">Grove LED bar</a>
+includes multiple LEDs that can be turned on or off independently and can be
+used to represent a kind of bar graph.</p>
 </div>
-<div class="paragraph">
-<p>We are using the
-<a href="https://www.seeedstudio.com/Grove-Starter-Kit-for-Arduino-p-1855.html">
-  Seeed Studio Grove Starter Kit for Arduino</a>
-in all of our labs for the course
-<a href="https://www.engr.mun.ca/~anderson/teaching/1020">
-  ENGI 1020: Introduction to Programming</a>.
-The kit includes a variety of components that plug into the analog, digital and
-I2C ports of the
-<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html">Grove shield</a>,
-which is itself plugged into an Arduino Uno board:</p>
+<div class="imageblock">
+<div class="content">
+<img src="led-bar.jpeg" alt="LED Bar">
 </div>
-<div class="paragraph centered">
-<p><span class="image"><img src="https://www.active-robots.com/media/catalog/product/cache/1/image/800x/9df78eab33525d08d6e5fb8d27136e95/b/a/base-shield-v2.jpg" alt="Grove Base Shield (courtesy of Active Robots)" width="300"></span>
-<span class="image"><img src="https://cdn.sparkfun.com//assets/parts/6/3/4/3/11021-01.jpg" alt="Arduino Uno (courtesy of SparkFun)" width="300"></span></p>
 </div>
 <div class="sect1">
-<h2 id="_components">Components</h2>
+<h2 id="_hardware">Hardware</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Each component in the kit requires some software interaction, which is supported
-by the functions in this library (and the libraries it uses).</p>
+<p>The LED bar should be plugged into a <strong>digital port</strong> on your
+<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html">Grove shield</a>:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../shield-digital.png" alt="Digital ports on the Grove shield v2.0" height="250">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_software">Software</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Functions that interact with the LED bar are prefixed with <code>bar</code>.</p>
+</div>
+<div class="sect2">
+<h3 id="_initialization">Initialization</h3>
+<div class="paragraph">
+<p>To prepare the software library to use the LED bar, first call the
+<code>barInit</code> function, telling it which pin it is connected to:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-C++" data-lang="C++">/**
+ * Prepare to use an LED bar.
+ *
+ * @param   pin     the **digital** pin the bar is attached to
+ */
+void barInit(int pin);</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_led_control">LED control</h3>
+<div class="paragraph">
+<p>There are ten different LEDs on the LED bar. We can control the brightness of each individually or all bars up to a given level/</p>
 </div>
 <div class="paragraph">
-
-
-<ul class="children children-li">
-
-<span><li>
-		<a href="/arduino-seeed/generic/" >Generic components</a></li>
-<p><div class="paragraph">
-<p>Many of the components that are included in the Grove kit can be used with
-generic (rather than device-specific) software support.</p>
-</div></p>
-</span>
-
-<span><li>
-		<a href="/arduino-seeed/components/" >Specialized components</a></li>
-<p>Many of the components that are used with the Grove kit require specialized software libraries.
-  4-Digit Display The Grove 4-Digit Display is a typical "digital watch" interface that is a nice choice for projects requiring alpha-numeric display.
-
-  Barometer The Barometer Sensor can be used to measure temperature and atmospheric pressure accurately. As the atmospheric pressure changes with altitude, it can also measure approximate altitude of a place.</p>
-</span>
-</ul>
-
-
-
-
-
+<p>To light up all bars to a certain level, call <code>barSetLevel()</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-C++" data-lang="C++">/**
+ * Make the LED bar display a level between 0 and 10
+ *
+ * @param    level        the level to display  @pre 0 &lt;= level &lt;= 10.0
+ */
+void barSetLevel(float level);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To light any individual bar, call <code>barSetLed()</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-C++" data-lang="C++">/**
+ * Set brightness for a single LED in the bar
+ *
+ * @param    led          which LED to manipulate  @pre 1 &lt;= led &lt;= 10
+ * @param    brightness   how bright to make it @pre 0 &lt;= brightness &lt;= 1
+ */
+void barSetLed(int led, float brightness);</code></pre>
 </div>
 </div>
 </div>
-
+</div>
+</div>
 
 
     
@@ -271,7 +332,8 @@ generic (rather than device-specific) software support.</p>
 </div>
 
 <div id="navigation">
-<a class="nav nav-next" href="/arduino-seeed/generic/" title="Generic components" style="margin-right: 0px;"><label>Generic components</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/arduino-seeed/components/lcd-screen/" title="LCD screen"> <i class="fa fa-chevron-left"></i><label>LCD screen</label></a>
+    <a class="nav nav-next" href="/arduino-seeed/components/rgba/" title="RGBA LED" style="margin-right: 0px;"><label>RGBA LED</label><i class="fa fa-chevron-right"></i></a></div>
 
 </section>
 <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Thumb Joystick on Arduino Seeed Library</title>
+    <link>https://memorial-ece.github.io/arduino-seeed/components/joystick/</link>
+    <description>Recent content in Thumb Joystick on Arduino Seeed Library</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-ca</language>
+    
+	<atom:link href="https://memorial-ece.github.io/arduino-seeed/components/joystick/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

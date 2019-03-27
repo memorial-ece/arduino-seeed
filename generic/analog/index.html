@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-	<meta name="generator" content="Hugo 0.53" />
     <title>Arduino Seeed Library</title>
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="revised" content="2019-03-27T10:26:50 NDT">
-<title>Seeed Studio for Arduino :: Arduino Seeed Library</title>
+<title>Analog :: Arduino Seeed Library</title>
 <link rel="shortcut icon" href="/arduino-seeed/images/favicon.png" type="image/x-icon" />
 <link href="/arduino-seeed/css/nucleus.css" rel="stylesheet">
 <link href="/arduino-seeed/css/font-awesome.min.css" rel="stylesheet">
@@ -27,7 +26,7 @@
 <link rel="stylesheet" type="text/css" href="https://memorial-ece.github.io/arduino-seeed/extra.css"/>
     
   </head>
-  <body data-url="/arduino-seeed/">
+  <body data-url="/arduino-seeed/generic/analog/">
     
       <div id="headermain"></div>
 <nav id="sidebar" class="">
@@ -64,14 +63,14 @@
             <li data-nav-id="/arduino-seeed/" class="dd-item">
             <a href="/arduino-seeed/"><i class="fa fa-fw fa-home"></i></a>
             </li>
-    <li data-nav-id="/arduino-seeed/generic/" class="dd-item alwaysopen haschildren
+    <li data-nav-id="/arduino-seeed/generic/" class="dd-item parent alwaysopen haschildren
         ">
       <div>
       <a href="/arduino-seeed/generic/">Generic components</a>
             <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
-    <li data-nav-id="/arduino-seeed/generic/analog/" class="dd-item
+    <li data-nav-id="/arduino-seeed/generic/analog/" class="dd-item parent active
         ">
       <div>
       <a href="/arduino-seeed/generic/analog/">Analog</a>
@@ -189,8 +188,47 @@
 <div id="overlay"></div>
 <div class="padding highlightable">
 
+  <div id="top-bar">
+    <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+        <span id="sidebar-toggle-span">
+          <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+            <i class="fa fa-bars"></i>
+          </a>
+        </span>
+        <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+        <span class="links">
+        
+
+
+
+
+
+
+
+ <a href='/arduino-seeed/'>Seeed Studio for Arduino</a> > <a href='/arduino-seeed/generic/'>Generic components</a> > Analog
+
+ 
+
+ 
+
+   
+        </span>
+    </div>
+    
+    
+    <div class="progress">
+        <div class="wrapper">
+    
+        </div>
+    </div>
+    
+
+  </div>
+
 
 <div id="body-inner">
+  
+    <h1>Analog</h1>
   
 
 
@@ -198,68 +236,96 @@
     
     
     
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
- 
+
 <div class="paragraph">
-<p>This is a software library for interacting with the
-<a href="https://www.seeedstudio.com/Grove-Starter-Kit-for-Arduino-p-1855.html">
-  Seeed Studio Grove Starter Kit for Arduino</a>.</p>
-</div>
-<div class="paragraph">
-<p>We are using the
-<a href="https://www.seeedstudio.com/Grove-Starter-Kit-for-Arduino-p-1855.html">
-  Seeed Studio Grove Starter Kit for Arduino</a>
-in all of our labs for the course
-<a href="https://www.engr.mun.ca/~anderson/teaching/1020">
-  ENGI 1020: Introduction to Programming</a>.
-The kit includes a variety of components that plug into the analog, digital and
-I2C ports of the
-<a href="https://www.seeedstudio.com/Base-Shield-V2-p-1378.html">Grove shield</a>,
-which is itself plugged into an Arduino Uno board:</p>
+<p>Generic analog components are all accessed via a common set of C&#43;&#43; functions.</p>
 </div>
 <div class="paragraph centered">
-<p><span class="image"><img src="https://www.active-robots.com/media/catalog/product/cache/1/image/800x/9df78eab33525d08d6e5fb8d27136e95/b/a/base-shield-v2.jpg" alt="Grove Base Shield (courtesy of Active Robots)" width="300"></span>
-<span class="image"><img src="https://cdn.sparkfun.com//assets/parts/6/3/4/3/11021-01.jpg" alt="Arduino Uno (courtesy of SparkFun)" width="300"></span></p>
+<p><span class="image"><img src="rotary-dial.jpeg" alt="Rotary dial" height="200"></span>
+<span class="image"><img src="light-sensor.jpeg" alt="Light sensor" height="200"></span></p>
 </div>
 <div class="sect1">
-<h2 id="_components">Components</h2>
+<h2 id="_hardware">Hardware</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Each component in the kit requires some software interaction, which is supported
-by the functions in this library (and the libraries it uses).</p>
+<p>Analog component can include the rotary dial, light sensor, servo or others.
+Unlike <a href="/arduino-seeed/generic/digital/">digital components</a>, which are either "on"
+or "off", analog components can either generate or accept a signal anywhere in a
+range of values (in our case, anywhere between 0 and 5 Volts).
+These components are connected to one of the analog ("A") ports on the Grove
+shield:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../shield-analog.png" alt="Analog ports on the Grove shield v2.0" height="250">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_software">Software</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Functions for interacting with analog pins are prefixed with <code>analog</code>.</p>
+</div>
+<div class="sect2">
+<h3 id="_initialization">Initialization</h3>
+<div class="paragraph">
+<p>No special initialization is required for interacting with analog components.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_reading_from_analog_pins">Reading from analog pins</h3>
+<div class="paragraph">
+<p>To read an analog value from a sensor such as a light sensor or rotary dial,
+use the <code>analogRead()</code> function provided by the core Arduino libraries:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-C++" data-lang="C++">/**
+ * Read from an analog pin.
+ *
+ * @param    pin          which analog pin to read from
+ */
+int analogRead(int pin);</code></pre>
+</div>
 </div>
 <div class="paragraph">
-
-
-<ul class="children children-li">
-
-<span><li>
-		<a href="/arduino-seeed/generic/" >Generic components</a></li>
-<p><div class="paragraph">
-<p>Many of the components that are included in the Grove kit can be used with
-generic (rather than device-specific) software support.</p>
-</div></p>
-</span>
-
-<span><li>
-		<a href="/arduino-seeed/components/" >Specialized components</a></li>
-<p>Many of the components that are used with the Grove kit require specialized software libraries.
-  4-Digit Display The Grove 4-Digit Display is a typical "digital watch" interface that is a nice choice for projects requiring alpha-numeric display.
-
-  Barometer The Barometer Sensor can be used to measure temperature and atmospheric pressure accurately. As the atmospheric pressure changes with altitude, it can also measure approximate altitude of a place.</p>
-</span>
-</ul>
-
-
-
-
-
+<p>This will return a value between 0 and 1023, where 0 represents 0 Volts (off)
+and 1023 represents 5 Volts (on).
+Intermediate values represent intermediate sensor inputs, e.g., a
+partially-shaded light sensor or a partially-turned rotary dial.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_writing_to_analog_pins">Writing to analog pins</h3>
+<div class="paragraph">
+<p>To write an analog value to an actuator such as a servo,
+use the <code>analogWrite()</code> function provided by the core Arduino libraries:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-C++" data-lang="C++">/**
+ * Write to an analog pin.
+ *
+ * @param    pin          which analog pin to write to
+ * @param    duty         the "duty cycle" to set @pre &gt;=0 and &lt; 256
+ */
+void analogWrite(int pin, int duty);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Writing to an analog pin is slightly different from reading.
+Whereas analog sensors produce voltages between 0 and 5 V, which the Arduino
+interprets as integers between 0 and 1023, <em>writing</em> to an analog pin doesn&#8217;t
+produce a steady voltage between 0 and 5 V.
+Instead, analog output is simulated: the pin switches between 0 and 5 V, with
+the <a href="https://en.wikipedia.org/wiki/Duty_cycle"><em>duty cycle</em></a>
+determining how much time it spends at 0 vs 5 V.</p>
 </div>
 </div>
 </div>
-
+</div>
 
 
     
@@ -271,7 +337,8 @@ generic (rather than device-specific) software support.</p>
 </div>
 
 <div id="navigation">
-<a class="nav nav-next" href="/arduino-seeed/generic/" title="Generic components" style="margin-right: 0px;"><label>Generic components</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/arduino-seeed/generic/" title="Generic components"> <i class="fa fa-chevron-left"></i><label>Generic components</label></a>
+    <a class="nav nav-next" href="/arduino-seeed/generic/digital/" title="Digital" style="margin-right: 0px;"><label>Digital</label><i class="fa fa-chevron-right"></i></a></div>
 
 </section>
 <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">

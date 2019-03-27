@@ -3,15 +3,23 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://memorial-ece.github.io/arduino-seeed/digits/</loc>
+    <loc>https://memorial-ece.github.io/arduino-seeed/generic/</loc>
   </url>
   
   <url>
-    <loc>https://memorial-ece.github.io/arduino-seeed/analog/</loc>
+    <loc>https://memorial-ece.github.io/arduino-seeed/components/</loc>
   </url>
   
   <url>
-    <loc>https://memorial-ece.github.io/arduino-seeed/barometer/</loc>
+    <loc>https://memorial-ece.github.io/arduino-seeed/components/digits/</loc>
+  </url>
+  
+  <url>
+    <loc>https://memorial-ece.github.io/arduino-seeed/generic/analog/</loc>
+  </url>
+  
+  <url>
+    <loc>https://memorial-ece.github.io/arduino-seeed/components/barometer/</loc>
   </url>
   
   <url>
@@ -20,31 +28,31 @@
   </url>
   
   <url>
-    <loc>https://memorial-ece.github.io/arduino-seeed/digital/</loc>
+    <loc>https://memorial-ece.github.io/arduino-seeed/generic/digital/</loc>
   </url>
   
   <url>
-    <loc>https://memorial-ece.github.io/arduino-seeed/gesture/</loc>
+    <loc>https://memorial-ece.github.io/arduino-seeed/components/gesture/</loc>
   </url>
   
   <url>
-    <loc>https://memorial-ece.github.io/arduino-seeed/heart-rate/</loc>
+    <loc>https://memorial-ece.github.io/arduino-seeed/components/heart-rate/</loc>
   </url>
   
   <url>
-    <loc>https://memorial-ece.github.io/arduino-seeed/lcd-screen/</loc>
+    <loc>https://memorial-ece.github.io/arduino-seeed/components/lcd-screen/</loc>
   </url>
   
   <url>
-    <loc>https://memorial-ece.github.io/arduino-seeed/led-bar/</loc>
+    <loc>https://memorial-ece.github.io/arduino-seeed/components/led-bar/</loc>
   </url>
   
   <url>
-    <loc>https://memorial-ece.github.io/arduino-seeed/rgba/</loc>
+    <loc>https://memorial-ece.github.io/arduino-seeed/components/rgba/</loc>
   </url>
   
   <url>
-    <loc>https://memorial-ece.github.io/arduino-seeed/rtc/</loc>
+    <loc>https://memorial-ece.github.io/arduino-seeed/components/rtc/</loc>
   </url>
   
   <url>
@@ -52,11 +60,11 @@
   </url>
   
   <url>
-    <loc>https://memorial-ece.github.io/arduino-seeed/servo/</loc>
+    <loc>https://memorial-ece.github.io/arduino-seeed/components/servo/</loc>
   </url>
   
   <url>
-    <loc>https://memorial-ece.github.io/arduino-seeed/speech/</loc>
+    <loc>https://memorial-ece.github.io/arduino-seeed/components/speech/</loc>
   </url>
   
   <url>
@@ -65,11 +73,11 @@
   </url>
   
   <url>
-    <loc>https://memorial-ece.github.io/arduino-seeed/joystick/</loc>
+    <loc>https://memorial-ece.github.io/arduino-seeed/components/joystick/</loc>
   </url>
   
   <url>
-    <loc>https://memorial-ece.github.io/arduino-seeed/ultrasonic/</loc>
+    <loc>https://memorial-ece.github.io/arduino-seeed/components/ultrasonic/</loc>
   </url>
   
 </urlset>
