@@ -30,4 +30,4 @@ image:https://cdn.sparkfun.com//assets/parts/6/3/4/3/11021-01.jpg[Arduino Uno (c
 Each component in the kit requires some software interaction, which is supported
 by the functions in this library (and the libraries it uses).
 
-{{< children description="true" sort="Weight" >}}
+{{< children description="true" sort="Weight" style="card" >}}
