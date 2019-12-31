@@ -4,11 +4,15 @@ title: Speech Recognizer
 
 The
 http://wiki.seeedstudio.com/Grove-Speech_Recognizer[Grove Speech Recognizer]
-can recognize 22 pieces of commands including 'start', 'stop', 'Play music' and so on. Every time it recognizes a command, it will return a value.Here are some notes that you must know before using it: Awaken Word: Hicell (Please pronounce it as one word) When it recognizes the awaken word, LED turn red, then you can say the command word, if it recognize the command word, LED will turn blue.
+can recognize 22 voice commands.
 
 <!--more-->
 
 image::speech-recognizer.png[Speech Recognizer]
+
+The
+http://wiki.seeedstudio.com/Grove-Speech_Recognizer[Grove Speech Recognizer]
+can recognize commands including 'start', 'stop', 'Play music' and so on. Every time it recognizes a command, it will return a value.Here are some notes that you must know before using it: Awaken Word: Hicell (Please pronounce it as one word) When it recognizes the awaken word, LED turn red, then you can say the command word, if it recognize the command word, LED will turn blue.
 
 
 == Hardware
